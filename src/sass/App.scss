@@ -1,0 +1,43 @@
+@font-face {
+  font-family: FontX;
+  src: url("../assets/fonts/fontregular.woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: FontX;
+  src: url("../assets/fonts/fontmedium.woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: FontX;
+  src: url("../assets/fonts/fontbold.woff2");
+  font-weight: 600;
+}
+
+*,
+*:before,
+*:after {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  //   background-color: #131313;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: FontX, "Neue Helvetica W02", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  background-color: #0b0b0b;
+  color: #fff;
+  padding-top: 6rem;
+}
+
+ul {
+  padding: 0;
+}

@@ -1,0 +1,45 @@
+.tabs-container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 2rem auto;
+  margin-top: 12rem;
+  border-bottom: 2px solid #3da1ff;
+}
+
+.tabs-list {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  margin: 1em 0 -2px;
+  padding: 0;
+
+  padding: 3px 8px 0;
+  font-size: 15px;
+}
+
+.tab {
+  padding: 0.6rem 3rem;
+  border: 2px solid #3da1ff;
+  //margin: 2rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 12px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: -4px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  background-color: rgb(29, 29, 29);
+}
+
+.tab-active {
+  background: rgb(83, 123, 228);
+  background: linear-gradient(
+    180deg,
+    rgba(83, 123, 228, 1) 0%,
+    rgba(61, 161, 255, 1) 100%
+  );
+  color: #000;
+  z-index: 5;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
