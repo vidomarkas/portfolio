@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../sass/Footer.scss";
 import logo from "../assets/img/logo.png";
 //import twitter from "../assets/img/twitter.svg";
@@ -21,12 +22,12 @@ export default function Footer() {
           </p>
         </div>
         <div className="footer__item">
-          <button>Let's do this</button>
+          <a className="button-link" href="mailto:vidomarkas@gmail.com">
+            Let's do this
+          </a>
         </div>
       </div>
-      <div className="footer-logo">
-        <img src={logo} alt="" />
-      </div>
+
       <div className="footer-content">
         <div className="footer-copyright">&copy;2020 Viktoras Domarkas</div>
         <ul className="footer__social-media">

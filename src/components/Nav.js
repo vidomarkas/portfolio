@@ -25,12 +25,13 @@ export default function Nav() {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/work">
-              Work
+            <Link className="nav-link" to="/contact">
+              Contact
             </Link>
           </li>
         </ul>
       </div>
+      <div className="nav-line"></div>
     </nav>
   );
 }

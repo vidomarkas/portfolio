@@ -3,29 +3,28 @@
   max-width: 120rem;
   margin: 2rem auto;
   margin-top: 12rem;
-  border-bottom: 2px solid #3da1ff;
+  border-bottom: 1px solid #fa1e4e;
 }
 
 .tabs-list {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  margin: 1em 0 -2px;
+  margin: 1rem 0 -1px;
   padding: 0;
-
   padding: 3px 8px 0;
   font-size: 15px;
 }
 
 .tab {
   padding: 0.6rem 3rem;
-  border: 2px solid #3da1ff;
-  //margin: 2rem;
-  border-top-left-radius: 4px;
+  border: 1px solid #fa1e4e;
+  border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   display: inline-block;
   cursor: pointer;
-  margin-right: -4px;
+  margin-right: -6px;
+  margin-left: -6px;
   font-size: 1.6rem;
   line-height: 1.6rem;
   font-weight: 400;
@@ -33,13 +32,7 @@
 }
 
 .tab-active {
-  background: rgb(83, 123, 228);
-  background: linear-gradient(
-    180deg,
-    rgba(83, 123, 228, 1) 0%,
-    rgba(61, 161, 255, 1) 100%
-  );
+  background: #fa1e4e;
   color: #000;
   z-index: 5;
-  border: 2px solid rgba(0, 0, 0, 0);
 }

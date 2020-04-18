@@ -12,13 +12,19 @@ export const ProjectContextProvider = (props) => {
     fetch("https://viktorasd2.sg-host.com/wp-json/wp/v2/projects")
       .then((response) => response.json())
       .then((data) => {
-        setProjects((prevState) => [...data, ...prevState]);
+        setProjects([...data]);
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Error fetching the project data. ", err);
       });
   };
+
+  useEffect(() => {
+    setLoading(true);
+    fetchProjects();
+    // eslint-disable-next-line
+  }, []);
 
   const filterProjects = (category) => {
     if (category === "all") {
@@ -31,12 +37,6 @@ export const ProjectContextProvider = (props) => {
   };
 
   useEffect(() => {
-    setLoading(true);
-    fetchProjects();
-    // eslint-disable-next-line
-  }, []);
-
-  useEffect(() => {
     if (!loading) {
       setFilteredProjects(projects);
     }
@@ -46,7 +46,7 @@ export const ProjectContextProvider = (props) => {
   if (!loading) {
     return (
       <ProjectContext.Provider
-        value={{ projects, filteredProjects, filterProjects }}
+        value={{ projects, filteredProjects, filterProjects, loading }}
       >
         {props.children}
       </ProjectContext.Provider>
@@ -61,7 +61,7 @@ export const ProjectContextProvider = (props) => {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <Spinner />;
+        <Spinner />
       </div>
     );
   }
