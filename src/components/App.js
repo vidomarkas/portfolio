@@ -9,7 +9,6 @@ import Footer from "./Footer";
 
 import "../sass/App.scss";
 import ProjectDetails from "./ProjectDetails";
-import bg from "../assets/img/bg.png";
 
 export class App extends Component {
   render() {
@@ -17,14 +16,12 @@ export class App extends Component {
       <>
         <Router>
           <Nav />
-          <div className="background" style={{ backgroundImage: `url(${bg})` }}>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/contact" component={Contact} />
-              <Route path="/project" component={ProjectDetails} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/contact" component={Contact} />
+            <Route path="/project" component={ProjectDetails} />
+          </Switch>
           <Footer />
         </Router>
       </>

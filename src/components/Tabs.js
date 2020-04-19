@@ -54,6 +54,7 @@ function Tabs() {
     return (
       <div className="tabs-container">
         <ul className="tabs-list">{singleCategory}</ul>
+        <div className="tab-line"></div>
       </div>
     );
   }

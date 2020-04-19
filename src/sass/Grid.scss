@@ -21,12 +21,12 @@
     position: relative;
     min-height: 460px;
     border-radius: 12px;
-    box-shadow: rgba(255, 255, 255, 0.094) 0px 0px 0px 1px;
+    // box-shadow: rgba(255, 255, 255, 0.094) 0px 0px 0px 1px;
     padding: 3rem;
     background-size: cover;
     background-position: center center;
     opacity: 0.9;
-    // filter: grayscale(50%);
+    filter: grayscale(50%);
     background-color: rgba(82, 82, 82, 0.26);
     transition: all 0.2s;
 
@@ -62,8 +62,9 @@
       );
     }
     &:hover {
-      // filter: grayscale(0);
+      filter: grayscale(0);
       // transform: translateZ(200px);
+      border-bottom: 1px solid #fa1e4e;
     }
     &:hover .project-content .project-link {
       opacity: 1;
