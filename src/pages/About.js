@@ -19,7 +19,19 @@ import image16 from "../assets/img/photos/16.jpg";
 import image17 from "../assets/img/photos/17.jpg";
 import image18 from "../assets/img/photos/18.jpg";
 
+import GitHubCalendar from "react-github-calendar";
+import ReactTooltip from "react-tooltip";
+
 export default function About() {
+  const defaultTheme = {
+    background: "transparent",
+    text: "#fa1e4e",
+    grade4: "#fa1e4e",
+    grade3: "#c8183e",
+    grade2: "#96122e",
+    grade1: "#640c1f",
+    grade0: "#32060f",
+  };
   return (
     <div className="about-background">
       <div className="about-container">
@@ -31,61 +43,22 @@ export default function About() {
             I’m a self-thought developer obsessed with self-improvement and
             raising the bar for my work with every project.
           </p>
+
           <p className="about-paragraph">
-            {" "}
-            I don’t believe in the traditional education system, I think
-            learning is a mindset - if I stop, I’ll be out of business in a few
-            months... ok years maybe.
-          </p>
-          <p className="about-paragraph">
-            {" "}
             I am based in Gravesend, Kent (22 miles and 40min away from London)
-            and have been living here for the past 10 years. I love building
-            websites using React(this portfolio was made with React) and I'm
-            also very passionate about designing mobile apps. So much more to
-            come!{" "}
+            and have been living here for the past 10 years.
           </p>
           <p className="about-paragraph">
-            I aim to create a beautiful websites, user interfaces. corner of the
-            web free of ads, sponsored posts, newsletter pop-ups, affiliate
-            links, and the rest of the annoying noise we're so accustomed to
-            seeing on the internet these days.
+            I love building websites using React (this portfolio was made with
+            React) and I'm also very passionate about looking new ways to create
+            and trying out latest web technologies.
           </p>
+
           <p className="about-paragraph">
-            {" "}
-            My skills include mobile interface design, prototyping, wireframing,
-            branding, product design, front-end development, and back-end
-            development.
+            My skills include front-end development (HTML, CSS, JavaScript,
+            React). I am also learning PHP to MySQL to be able to add more
+            functionality to my work.
           </p>
-          {/* <p>
-          {" "}
-          I love building digital products and creating enjoyable user
-          experiences. I have a passion for minimalism in design and believe
-          great design should be invisible.
-        </p> */}
-          {/* <p className="about-paragraph">
-          {" "}
-          Over the last 2 years, I've worked on a range of web and mobile
-          products. I'm always looking to work on fun projects.
-        </p>
-        <p className="about-paragraph">
-          {" "}
-          Feel free to reach out with work inquiries, side projects, or just to
-          say hello! Currently I am looking to become a member of a great web
-          developer team.
-        </p> */}
-          {/* <div>
-          My Toolbox JavaScript is my language of choice. I’ve been creating
-          full-stack JavaScript software for nearly five years. The most life
-          changing event in my life was getting introduced to Node.js, and of
-          course reading “Eloquent JavaScript” from cover to cover. This can
-          only outweigh the moment I started exploring serverless architectures.
-          Now, people keep calling me an influencer in the field of serverless.
-          I still don’t know how to feel about this. Core tools JavaScript
-          Nodejs Express MongoDB AWS Linux DevOps Serverless MySQL AngularJS
-          Gulp HTML CSS Sass Hugo Learning PHP Laravel, React FACTS:
-          1)kdmsfjnjdn
-        </div> */}
         </div>
         <div className="about-grid">
           <div
@@ -113,7 +86,7 @@ export default function About() {
             className=" about-grid-item about-grid-item--6"
           ></div>
           <div
-            style={{ backgroundImage: `url(${image2})` }}
+            style={{ backgroundImage: `url(${image12})` }}
             className=" about-grid-item about-grid-item--7"
           ></div>
           <div
@@ -169,6 +142,15 @@ export default function About() {
             className=" about-grid-item about-grid-item--20"
           ></div>
         </div>
+        <GitHubCalendar
+          className="github-container"
+          username="vidomarkas"
+          theme={defaultTheme}
+          blockSize={14}
+        >
+          {" "}
+          <ReactTooltip delayShow={50} html />
+        </GitHubCalendar>
       </div>
     </div>
   );

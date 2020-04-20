@@ -15,6 +15,7 @@
     // justify-content: space-evenly;
 
     position: relative;
+    padding-bottom: 10rem;
   }
 
   &-paragraph {
@@ -43,7 +44,7 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 100px);
     grid-gap: 1rem;
-    padding-bottom: 10rem;
+
     transform: rotate(-15deg);
 
     &-item {
@@ -154,4 +155,12 @@
   left: 0;
   top: 0;
   right: 0;
+}
+
+.github-container {
+}
+
+.react-github-calendar {
+  margin: 0 auto;
+  width: 60%;
 }
