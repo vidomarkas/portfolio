@@ -22,7 +22,10 @@ export default function Footer() {
           </p>
         </div>
         <div className="footer__item">
-          <a className="button-link" href="mailto:vidomarkas@gmail.com">
+          <a
+            className="button-link contact-button"
+            href="mailto:vidomarkas@gmail.com"
+          >
             Let's do this
           </a>
         </div>
@@ -33,18 +36,18 @@ export default function Footer() {
         <ul className="footer__social-media">
           <li className="footer__icon">
             <a href="https://github.com/vidomarkas">
-              <img src={github} alt="" />
+              <img src={github} alt="Visit github profile" />
             </a>
           </li>
           <li className="footer__icon">
             <a href="https://www.linkedin.com/in/viktoras-domarkas/">
-              <img src={linkedin} alt="" />
+              <img src={linkedin} alt="Visit linkedin profile" />
             </a>
           </li>
 
           <li className="footer__icon">
             <a href="mailto:vidomarkas@gmail.com">
-              <img src={email} alt="" />
+              <img src={email} alt="Send an email" />
             </a>
           </li>
         </ul>

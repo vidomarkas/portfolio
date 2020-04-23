@@ -4,10 +4,10 @@ import Tabs from "./Tabs";
 
 function MainMenu() {
   return (
-    <div className="perspective-parent">
+    <>
       <Tabs />
       <Grid />
-    </div>
+    </>
   );
 }
 

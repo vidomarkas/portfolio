@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 .grid {
   &-container {
     width: 100%;
@@ -9,7 +11,20 @@
     grid-gap: 2rem;
     padding-bottom: 20rem;
 
-    // transform: rotateY(2.665deg);
+    @include maxw(1214) {
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      width: 80%;
+    }
+
+    @include maxw(666) {
+      grid-template-columns: repeat(1, minmax(100px, 1fr));
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @include maxw(500) {
+      width: 96%;
+    }
   }
 
   &-link {
@@ -21,7 +36,6 @@
     position: relative;
     min-height: 460px;
     border-radius: 12px;
-    // box-shadow: rgba(255, 255, 255, 0.094) 0px 0px 0px 1px;
     padding: 3rem;
     background-size: cover;
     background-position: center center;
@@ -29,6 +43,10 @@
     filter: grayscale(50%);
     background-color: rgba(82, 82, 82, 0.26);
     transition: all 0.2s;
+
+    @include maxw(900) {
+      min-height: 300px;
+    }
 
     &::before {
       content: "";
@@ -60,6 +78,9 @@
         rgba(0, 0, 0, 0.396541) 89.22%,
         rgba(0, 0, 0, 0.4) 91.17%
       );
+      @include maxw(1000) {
+        opacity: 1;
+      }
     }
     &:hover {
       filter: grayscale(0);
@@ -75,34 +96,88 @@
     &--1 {
       grid-column: 1 / span 2;
       grid-row: 1;
+      @include maxw(1214) {
+        grid-column: 1 / span 1;
+      }
     }
     &--2 {
       grid-column: 3 / span 1;
       grid-row: 1;
+      @include maxw(1214) {
+        grid-column: 2 / span 1;
+      }
+      @include maxw(666) {
+        grid-column: 1 / span 1;
+        grid-row: 2;
+      }
     }
     &--3 {
       grid-column: 1 / span 1;
       grid-row: 2;
+      @include maxw(666) {
+        grid-column: 1 / span 1;
+        grid-row: 3;
+      }
     }
     &--4 {
       grid-column: 2 / span 1;
       grid-row: 2;
+      @include maxw(666) {
+        grid-column: 1 / span 1;
+        grid-row: 4;
+      }
+      @include maxw(666) {
+        grid-column: 1 / span 1;
+        grid-row: 4;
+      }
     }
     &--5 {
       grid-row: 2;
       grid-column: 3 / span 1;
+      @include maxw(1214) {
+        grid-row: 3;
+        grid-column: 1 / span 1;
+      }
+      @include maxw(666) {
+        grid-column: 1 / span 1;
+        grid-row: 5;
+      }
     }
     &--6 {
       grid-row: 3;
       grid-column: 1 / span 1;
+      @include maxw(1214) {
+        grid-row: 3;
+        grid-column: 2 / span 1;
+      }
+      @include maxw(666) {
+        grid-column: 1 / span 1;
+        grid-row: 6;
+      }
     }
     &--7 {
       grid-row: 3;
       grid-column: 2 / span 1;
+      @include maxw(1214) {
+        grid-row: 4;
+        grid-column: 1 / span 1;
+      }
+      @include maxw(666) {
+        grid-column: 1 / span 1;
+        grid-row: 7;
+      }
     }
     &--8 {
       grid-row: 3;
       grid-column: 3 / span 1;
+      @include maxw(1214) {
+        grid-row: 4;
+        grid-column: 2 / span 1;
+      }
+      @include maxw(666) {
+        grid-column: 1 / span 1;
+        grid-row: 8;
+      }
     }
   }
 }
@@ -141,6 +216,9 @@
     padding: 1rem 1.6rem;
     border-radius: 4px;
     white-space: nowrap;
+    @include maxw(1000) {
+      opacity: 1;
+    }
 
     &:hover {
       color: #fff;
@@ -153,8 +231,4 @@
       margin-left: 0.5rem;
     }
   }
-}
-
-.perspective-parent {
-  perspective: 100px;
 }

@@ -35,7 +35,7 @@ export default function About() {
   return (
     <div className="about-background">
       <div className="about-container">
-        <div className="about-line"></div>
+        {/* <div className="about-line"></div> */}
 
         <div className="about-header">
           <h1 className="about-heading">Hello,</h1>
@@ -50,13 +50,13 @@ export default function About() {
           </p>
           <p className="about-paragraph">
             I love building websites using React (this portfolio was made with
-            React) and I'm also very passionate about looking new ways to create
-            and trying out latest web technologies.
+            React) and I'm also very passionate about looking for new ways to
+            create and trying out latest web technologies.
           </p>
 
           <p className="about-paragraph">
             My skills include front-end development (HTML, CSS, JavaScript,
-            React). I am also learning PHP to MySQL to be able to add more
+            React). I am also learning PHP and MySQL to be able to add more
             functionality to my work.
           </p>
         </div>

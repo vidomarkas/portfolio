@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 .tabs-container {
   width: 100%;
   max-width: 120rem;
@@ -5,6 +7,16 @@
   margin-top: 12rem;
   //border-bottom: 1px solid #fa1e4e;
   position: relative;
+
+  @include maxw(1214) {
+    width: 80%;
+  }
+  @include maxw(600) {
+    margin-top: 6rem;
+  }
+  @include maxw(500) {
+    width: 96%;
+  }
 }
 
 .tabs-list {
@@ -14,7 +26,6 @@
   margin: 1rem 0 -1px;
   padding: 0;
   padding: 3px 8px 0;
-  font-size: 15px;
 }
 
 .tab {
@@ -31,6 +42,21 @@
   line-height: 1.6rem;
   font-weight: 400;
   background-color: rgb(29, 29, 29);
+  @include maxw(800) {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    padding: 0.6rem 2rem;
+  }
+  @include maxw(600) {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0.6rem 2rem;
+  }
+  @include maxw(400) {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0.4rem 1rem;
+  }
   &:hover {
     background-color: #220d1a;
   }

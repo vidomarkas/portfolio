@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 .footer {
   color: #fff;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -17,11 +19,25 @@
     padding: 3rem;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include maxw(1320) {
+      width: 80%;
+    }
+    @include maxw(826) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    @include maxw(550) {
+      padding: 1rem;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 3rem;
+      @include maxw(826) {
+        margin-right: 0rem;
+      }
     }
     & h3 {
       font-size: 3.2rem;
@@ -30,6 +46,9 @@
       color: #fff;
       letter-spacing: -3px;
       white-space: nowrap;
+      @include maxw(826) {
+        margin: 0;
+      }
     }
 
     & p {
@@ -40,10 +59,8 @@
     }
 
     & .contact-button {
-      white-space: nowrap;
-      border-radius: 8px;
-      padding: 1rem 2rem;
-      background-color: #fff;
+      margin-right: 0;
+      display: block;
     }
   }
 
@@ -72,6 +89,15 @@
     margin-top: 10rem;
     display: flex;
     justify-content: space-between;
+    @include minmaxw(552, 1320) {
+      margin-top: 12rem;
+    }
+  }
+
+  &-copyright {
+    @include maxw(350) {
+      font-size: 1.4rem;
+    }
   }
 
   &__social-media {

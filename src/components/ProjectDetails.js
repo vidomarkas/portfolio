@@ -66,7 +66,7 @@ export default function ProjectDetails({ location }) {
             {projectImages.map((img, index) => {
               return (
                 <div key={index} className="aws-btn">
-                  <img src={img} alt="screenshot" />
+                  <img src={img} alt="screenshot" className="slide" />
                 </div>
               );
             })}
@@ -173,6 +173,22 @@ export default function ProjectDetails({ location }) {
                     );
                   })}
                 </ul>
+              </section>
+            ) : null}
+
+            {project.acf.video ? (
+              <section className="story-section">
+                <h3 className="story-section-label">Video</h3>
+                <div className="story-section-description">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src={project.acf.video}
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </section>
             ) : null}
 

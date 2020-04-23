@@ -2,16 +2,19 @@
   font-family: FontX;
   src: url("../assets/fonts/fontregular.woff2");
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: FontX;
   src: url("../assets/fonts/fontmedium.woff2");
   font-weight: 500;
+  font-display: swap;
 }
 @font-face {
   font-family: FontX;
   src: url("../assets/fonts/fontbold.woff2");
   font-weight: 600;
+  font-display: swap;
 }
 
 *,

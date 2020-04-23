@@ -1,14 +1,37 @@
+@import "./mixins.scss";
+
 .header {
   margin: 0 auto;
   max-width: 98rem;
   text-align: center;
   padding-top: 8rem;
+
+  @include maxw(1214) {
+    width: 80%;
+  }
+  @include maxw(600) {
+    padding-top: 3rem;
+  }
+
+  @include maxw(500) {
+    width: 96%;
+  }
   &-heading {
     font-size: 7.2rem;
     line-height: 7.2rem;
     font-weight: 600;
     letter-spacing: -4px;
     margin-bottom: 2rem;
+
+    @include maxw(778) {
+      font-size: 6rem;
+      line-height: 6.2rem;
+    }
+    @include maxw(406) {
+      font-size: 4rem;
+      line-height: 4.2rem;
+      letter-spacing: -2px;
+    }
   }
   &-text {
     color: #858585;
@@ -17,5 +40,13 @@
     font-weight: 400;
     max-width: 700px;
     margin: 0 auto;
+    @include maxw(778) {
+      font-size: 2.2rem;
+      line-height: 3.2rem;
+    }
+    @include maxw(406) {
+      font-size: 1.9rem;
+      line-height: 2.3rem;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 .about {
   &-background {
     background: rgb(50, 10, 19);
@@ -11,8 +13,6 @@
     width: 100%;
     max-width: 120rem;
     margin: 0 auto;
-    // display: flex;
-    // justify-content: space-evenly;
 
     position: relative;
     padding-bottom: 10rem;
@@ -28,14 +28,17 @@
   &-header {
     width: 50%;
     margin: 0 auto;
+    border: 1px solid red;
   }
   &-heading {
-    font-size: 10.42vw;
+    font-size: 14rem;
     letter-spacing: -8px;
-    line-height: 1.4em;
+    line-height: 14rem;
     margin: 0;
     -webkit-text-stroke: 1px #fa1e4e;
     color: rgba(0, 0, 0, 0);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   &-grid {
@@ -44,20 +47,15 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 100px);
     grid-gap: 1rem;
-
     transform: rotate(-15deg);
 
     &-item {
-      // height: 150px;
-      // width: 150px;
       background-color: #490b188c;
-      //border: 1px solid #fa1e4e;
       display: flex;
       justify-content: center;
       align-items: center;
       background-size: cover;
       background-position: center center;
-
       opacity: 0.1;
       transition: all 0.3s;
       &:hover {
@@ -147,18 +145,15 @@
   }
 }
 
-.about-line {
-  height: 40px;
-  background-image: linear-gradient(90deg, #fa1e4e, transparent);
-  bottom: -1px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-}
-
-.github-container {
-}
+// .about-line {
+//   height: 40px;
+//   background-image: linear-gradient(90deg, #fa1e4e, transparent);
+//   bottom: -1px;
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   right: 0;
+// }
 
 .react-github-calendar {
   margin: 0 auto;

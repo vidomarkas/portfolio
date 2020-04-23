@@ -4,10 +4,7 @@ import "../sass/Header.scss";
 function Header() {
   return (
     <header className="header">
-      <h1
-        data-title=" Hi, I'm Viktoras. A Front-end Web Developer"
-        className="header-heading "
-      >
+      <h1 className="header-heading ">
         Hi, I'm Viktoras. <br />A Front-end Web Developer
       </h1>
 

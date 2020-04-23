@@ -9,7 +9,7 @@ export const ProjectContextProvider = (props) => {
   const [loading, setLoading] = useState(true);
 
   const fetchProjects = () => {
-    fetch("https://vdomarkas.com/wp-json/wp/v2/projects")
+    fetch("https://viktorasd5.sg-host.com/wp/wp-json/wp/v2/projects")
       .then((response) => response.json())
       .then((data) => {
         setProjects([...data]);
