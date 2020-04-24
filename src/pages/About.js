@@ -138,7 +138,7 @@ export default function About() {
             className=" about-grid-item about-grid-item--19"
           ></div>
           <div
-            style={{ backgroundImage: `url(${image17})` }}
+            // style={{ backgroundImage: `url(${image17})` }}
             className=" about-grid-item about-grid-item--20"
           ></div>
         </div>

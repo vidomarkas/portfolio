@@ -10,12 +10,18 @@
     );
   }
   &-container {
-    width: 100%;
+    width: 80%;
     max-width: 120rem;
     margin: 0 auto;
-
     position: relative;
     padding-bottom: 10rem;
+
+    @include maxw(800) {
+      width: 80%;
+    }
+    @include maxw(420) {
+      width: 96%;
+    }
   }
 
   &-paragraph {
@@ -28,7 +34,13 @@
   &-header {
     width: 50%;
     margin: 0 auto;
-    border: 1px solid red;
+    margin-bottom: 4rem;
+    @include maxw(1150) {
+      width: 70%;
+    }
+    @include maxw(644) {
+      width: 100%;
+    }
   }
   &-heading {
     font-size: 14rem;
@@ -39,6 +51,11 @@
     color: rgba(0, 0, 0, 0);
     margin-top: 4rem;
     margin-bottom: 4rem;
+    @include maxw(446) {
+      font-size: 10rem;
+      line-height: 10rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &-grid {
@@ -48,6 +65,7 @@
     grid-template-rows: repeat(8, 100px);
     grid-gap: 1rem;
     transform: rotate(-15deg);
+    display: none;
 
     &-item {
       background-color: #490b188c;
@@ -158,4 +176,11 @@
 .react-github-calendar {
   margin: 0 auto;
   width: 60%;
+  @include maxw(956) {
+    margin-bottom: 8rem;
+    width: 80%;
+  }
+  @include maxw(644) {
+    width: 100%;
+  }
 }
