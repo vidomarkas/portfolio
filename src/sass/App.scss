@@ -38,9 +38,30 @@ body {
     sans-serif;
   background-color: #0b0b0b;
   color: #fff;
-  padding-top: 6rem;
 }
 
 ul {
   padding: 0;
+}
+
+.app {
+  &-container {
+    display: flex;
+  }
+
+  &-item {
+    &--GithubFeed {
+      flex-basis: 15%;
+    }
+
+    &--Main {
+      flex-basis: 70%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &--SocialMedia {
+      flex-basis: 15%;
+    }
+  }
 }

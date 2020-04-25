@@ -6,8 +6,7 @@ import bg from "../assets/img/bg.png";
 export default function Home() {
   return (
     <>
-      <div className="background" style={{ backgroundImage: `url(${bg})` }}>
-        <Header />
+      <div className="background">
         <MainMenu />
       </div>
     </>
