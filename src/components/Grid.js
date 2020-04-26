@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ProjectContext } from "../ProjectContext";
+import { ProjectContext } from "../Context/ProjectContext";
 import GridItem from "./GridItem";
 import "../sass/Grid.scss";
 

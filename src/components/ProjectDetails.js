@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ProjectContext } from "../ProjectContext";
+import { ProjectContext } from "../Context/ProjectContext";
 import NotFound from "./NotFound";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
@@ -205,9 +205,9 @@ export default function ProjectDetails({ location }) {
             <Link className="button-link" to="/">
               ‹ Back
             </Link>
-            <Link className="button-link" to="/">
+            {/* <Link className="button-link" to="/">
               See another project &#8250;
-            </Link>
+            </Link> */}
           </div>
         </div>
       </>

@@ -47,6 +47,11 @@
     line-height: 2rem;
     color: #5c5e6e;
     transition: all 0.3s;
+    text-transform: capitalize;
+
+    &:active {
+      background-color: #8f94c0;
+    }
     &:hover {
       border-bottom: 3px solid #1488fa;
       background-color: #1b1d2e;

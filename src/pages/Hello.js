@@ -4,12 +4,13 @@ import pin from "../assets/img/pin.svg";
 import heart from "../assets/img/heart.svg";
 import "../sass/Hello.scss";
 import LatestPost from "../components/LatestPost";
+import LatestProject from "../components/LatestProject";
 
 function Hello() {
   return (
     <div className="hello-container">
       <div className="hello-left">
-        <div className="hello-intro card">
+        <div className="hello-intro card card-padding">
           <h2 className="card-heading">Introduction</h2>
           <div className="hello-intro--body">
             <div className="hello-intro--item">
@@ -41,7 +42,7 @@ function Hello() {
         <LatestPost />
       </div>
       <div className="hello-right">
-        <div className="card">
+        <div className="card card-padding">
           <h2 className="card-heading">Message</h2>
           <form action="" className="hello-message">
             <textarea
@@ -68,6 +69,7 @@ function Hello() {
             </div>
           </form>
         </div>
+        <LatestProject />
       </div>
     </div>
   );

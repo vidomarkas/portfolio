@@ -1,17 +1,18 @@
 import React from "react";
 import exampleImg from "../assets/img/example.jpg";
 import Calendar from "../assets/img/calendar.svg";
-import Eye from "../assets/img/eye.svg";
 import { Link } from "react-router-dom";
+
+import "../sass/LatestPost.scss";
 
 function LatestPost() {
   return (
     <div className="card latest-post">
-      {/* <h2 className="card-heading">Latest post</h2> */}
-      <img className="card-img" src={exampleImg} alt="" />
+      <h2 className="card-heading latest-post-heading">Latest post</h2>
+      <img className="card-img" src={exampleImg} alt="post image" />
       <div className="latest-post-body">
-        <h2 className="card-heading">Latest post</h2>
-        <h3 className="card-title">How to eat sleep code repeat</h3>
+        {/* <h2 className="card-heading">Latest post</h2> */}
+        <h3 className="latest-post-title">How to eat sleep code repeat</h3>
 
         <div className="latest-post-content">
           <p>
@@ -24,7 +25,9 @@ function LatestPost() {
             <img src={Calendar} alt="date" />
             <span>01/04/2020</span>
           </div>
-          <Link className="btn latest-post-btn">Read</Link>
+          <Link to="/" className="btn latest-post-btn">
+            Read
+          </Link>
         </div>
       </div>
     </div>

@@ -3,79 +3,44 @@
 .tabs-container {
   width: 100%;
   max-width: 120rem;
-  margin: 2rem auto;
-  margin-top: 12rem;
-  //border-bottom: 1px solid #fa1e4e;
+  margin: 0 auto 2rem auto;
   position: relative;
-
-  @include maxw(1214) {
-    width: 80%;
-  }
-  @include maxw(600) {
-    margin-top: 6rem;
-  }
-  @include maxw(500) {
-    width: 96%;
-  }
 }
 
 .tabs-list {
   display: flex;
-  justify-content: flex-start;
-  overflow: hidden;
-  margin: 1rem 0 -1px;
-  padding: 0;
-  padding: 3px 8px 0;
+  justify-content: center;
 }
 
 .tab {
   padding: 0.6rem 3rem;
-  border: 1px solid #fa1e4e;
-  border-bottom: none;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 12px;
+  border: 1px solid #1488fa;
   display: inline-block;
   cursor: pointer;
   margin-right: -2px;
-  //margin-left: -6px;
   font-size: 1.6rem;
   line-height: 1.6rem;
   font-weight: 400;
-  background-color: rgb(29, 29, 29);
-  @include maxw(800) {
-    font-size: 1.4rem;
-    line-height: 1.4rem;
-    padding: 0.6rem 2rem;
+  background-color: #1517280a;
+  color: #1488fa;
+  &:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
-  @include maxw(600) {
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-    padding: 0.6rem 2rem;
-  }
-  @include maxw(400) {
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-    padding: 0.4rem 1rem;
+  &:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
   &:hover {
-    background-color: #220d1a;
+    background-color: #151728c0;
   }
-}
-
-.tab-line {
-  height: 1px;
-  background-image: linear-gradient(90deg, #fa1e4e, transparent);
-  bottom: -1px;
-  position: absolute;
-  left: 0;
-  right: 0;
 }
 
 .tab-active {
-  background: #fa1e4e;
+  background: #1488fa;
   color: #000;
   z-index: 5;
   &:hover {
-    background: #fa1e4e;
+    background: #1488fa;
   }
 }

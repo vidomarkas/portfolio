@@ -1,0 +1,51 @@
+.latest-project {
+  &-container {
+    display: flex;
+  }
+
+  &-left {
+    &-container {
+      flex-basis: 50%;
+    }
+
+    &-image {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    &-tech {
+    }
+  }
+
+  &-right {
+    &-container {
+      padding-left: 2rem;
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &-title {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  &-body {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &-controls {
+    display: flex;
+    justify-content: end;
+  }
+}

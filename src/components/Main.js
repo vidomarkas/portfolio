@@ -8,6 +8,7 @@ import bg from "../assets/img/main-bg.jpg";
 import Hello from "../pages/Hello";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import Projects from "../pages/Projects";
 
 import ProjectDetails from "./ProjectDetails";
 
@@ -27,6 +28,7 @@ function Main() {
             <Switch>
               <Route exact path="/" component={Hello} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/projects" component={Projects} />
               <Route exact path="/contact" component={Contact} />
               <Route path="/project" component={ProjectDetails} />
             </Switch>

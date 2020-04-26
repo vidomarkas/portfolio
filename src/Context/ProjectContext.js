@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import Spinner from "./components/Spinner";
+import Spinner from "../components/Spinner";
 
 export const ProjectContext = createContext({});
 
@@ -44,6 +44,7 @@ export const ProjectContextProvider = (props) => {
   }, [loading]);
 
   if (!loading) {
+    console.log("projects", projects);
     return (
       <ProjectContext.Provider
         value={{ projects, filteredProjects, filterProjects, loading }}

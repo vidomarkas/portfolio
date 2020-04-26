@@ -38,7 +38,7 @@ export default function About() {
         {/* <div className="about-line"></div> */}
 
         <div className="about-header">
-          <h1 className="about-heading">Hello,</h1>
+          <h1 className="about-heading">About</h1>
           <p className="about-paragraph">
             I’m a self-thought developer obsessed with self-improvement and
             raising the bar for my work with every project.

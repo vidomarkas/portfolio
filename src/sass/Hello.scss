@@ -101,9 +101,13 @@
 
 .card {
   background-color: #151728;
-  padding: 2rem;
+
   border-radius: 6px;
   margin-bottom: 2rem;
+
+  &-padding {
+    padding: 2rem;
+  }
 
   &-heading {
     margin: 0;
@@ -113,64 +117,7 @@
   &-img {
     width: 100%;
 
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-  }
-
-  &-title {
-    color: #fff;
-    font-size: 2rem;
-  }
-}
-
-.latest-post {
-  padding: 0;
-
-  &-body {
-    padding: 2rem;
-  }
-
-  &-content {
-    color: #fff;
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-    & p {
-      margin: 0;
-    }
-  }
-
-  &-details {
-    display: flex;
-    justify-content: flex-end;
-
-    & img {
-      height: 1.6rem;
-      margin-right: 1rem;
-    }
-    & span {
-      font-size: 1.3rem;
-    }
-  }
-
-  &-btn {
-    display: inline-block;
-  }
-}
-
-.btn {
-  cursor: pointer;
-  background-color: #1488fa;
-  border: none;
-  color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 20px #1b86f9;
-  border-radius: 4px;
-  padding: 1rem 2rem;
-
-  margin-left: auto;
-  outline: none;
-  transition: all 0.3s;
-  &:hover {
-    box-shadow: none;
+    // border-top-left-radius: 6px;
+    // border-top-right-radius: 6px;
   }
 }

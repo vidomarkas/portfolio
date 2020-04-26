@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { ProjectContext } from "../ProjectContext";
+import { ProjectContext } from "../Context/ProjectContext";
 import "../sass/Tabs.scss";
 import Tab from "./Tab";
 
@@ -54,7 +54,6 @@ function Tabs() {
     return (
       <div className="tabs-container">
         <ul className="tabs-list">{singleCategory}</ul>
-        <div className="tab-line"></div>
       </div>
     );
   }
