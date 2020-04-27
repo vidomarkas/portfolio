@@ -39,6 +39,7 @@
     height: 6.2256rem;
     width: 100%;
     background-color: #151728;
+    margin-bottom: -1px;
   }
 
   &-links {
@@ -56,18 +57,19 @@
     color: #5c5e6e;
     transition: all 0.3s;
     text-transform: capitalize;
+    border-bottom: 4px solid #151728;
 
     &:active {
       background-color: #8f94c0;
     }
     &:hover {
-      border-bottom: 3px solid #1488fa;
+      border-bottom: 4px solid #1488fa;
       background-color: #1b1d2e;
       color: #fff;
     }
 
     &--active {
-      border-bottom: 3px solid #1488fa;
+      border-bottom: 4px solid #1488fa;
       background-color: #1b1d2e;
       color: #fff;
     }
