@@ -202,7 +202,7 @@ export default function ProjectDetails({ location }) {
               </section>
             ) : null}
 
-            <Link className="button-link" to="/">
+            <Link className="button-link" to="https://vdomarkas.com/projects">
               ‹ Back
             </Link>
             {/* <Link className="button-link" to="/">

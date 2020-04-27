@@ -4,14 +4,19 @@ import "../sass/Header.scss";
 import photo from "../assets/img/photo.png";
 import bg from "../assets/img/main-bg.jpg";
 import HeaderTabs from "./HeaderTabs";
+import Video from "../assets/video/vid.mp4";
 
 function Header() {
   return (
     <header className="header">
       <div
         className="header-background"
-        style={{ backgroundImage: `url(${bg})` }}
-      ></div>
+        // style={{ backgroundImage: `url(${bg})` }}
+      >
+        <video autoPlay muted loop className="header-video">
+          <source src={Video} type="video/mp4" />
+        </video>
+      </div>
       <div className="header-menu">
         <HeaderTabs />
       </div>

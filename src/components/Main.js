@@ -9,6 +9,7 @@ import Hello from "../pages/Hello";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Projects from "../pages/Projects";
+import Video from "../assets/video/vid.mp4";
 
 import ProjectDetails from "./ProjectDetails";
 
@@ -19,10 +20,14 @@ function Main() {
         <div className="app-item app-item--Main ">
           <div
             className="main-background"
-            style={{ backgroundImage: `url(${bg})` }}
-          ></div>
+            // style={{ backgroundImage: `url(${bg})` }}
+          >
+            <video autoPlay muted loop className="header-video">
+              <source src={Video} type="video/mp4" />
+            </video>
+          </div>
           <div className="main-overlay"></div>
-          <Nav />
+          {/* <Nav /> */}
           <div className="main-container">
             <Header />
             <Switch>
