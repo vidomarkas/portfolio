@@ -10,7 +10,9 @@ const ProjectGalleryItem = ({ project, index }) => {
           backgroundImage: `url(${project.acf.main_image})`,
         }}
       >
-        <div className="project-image-overlay"></div>
+        <Link to={{ pathname: `/project/${project.slug}` }}>
+          <div className="project-image-overlay"></div>
+        </Link>
       </div>
       <div className="project-content">
         <h2 className="project-title">{project.title.rendered}</h2>

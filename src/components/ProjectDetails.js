@@ -79,9 +79,12 @@ export default function ProjectDetails({ location }) {
   if (project) {
     return (
       <>
-        <header className="projectDetails__header">{showImageSlider()}</header>
-
         <div className="projectDetails__body">
+          <header
+          //  className="projectDetails__header"
+          >
+            {showImageSlider()}
+          </header>
           <div className="story">
             <h2 className="story-title">{project.title.rendered}</h2>
 

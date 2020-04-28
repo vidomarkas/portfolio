@@ -26,7 +26,16 @@ function Hello() {
                 <img src={pin} alt="location" />
               </span>
               <p>
-                Lives in <span>Gravesend, Kent</span>
+                Lives in{" "}
+                <span>
+                  {" "}
+                  <a
+                    target="_blank"
+                    href="https://www.google.com/maps/place/Gravesend/data=!4m2!3m1!1s0x47d8b412568e0b3f:0x4acb4760cd850e75?sa=X&ved=2ahUKEwiF0eavwYnpAhUnREEAHXEeB4kQ8gEwMXoECBwQBA"
+                  >
+                    Gravesend, Kent
+                  </a>{" "}
+                </span>
               </p>
             </div>
             <div className="hello-intro--item">

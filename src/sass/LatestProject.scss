@@ -3,6 +3,20 @@
     display: flex;
   }
 
+  &-image-placeholder {
+    border: 1px solid #1488fa;
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-text {
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.24);
+      margin: 0;
+    }
+  }
+
   &-left {
     &-container {
       flex-basis: 50%;

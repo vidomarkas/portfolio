@@ -56,8 +56,9 @@ export default function About() {
 
           <p className="about-paragraph">
             My skills include front-end development (HTML, CSS, JavaScript,
-            React). I am also learning PHP and MySQL to be able to add more
-            functionality to my work.
+            React). I use tools such as Git, Gulp, Figma, Adobe XD.
+            {/* I am also learning PHP and MySQL to be able to add more
+            functionality to my work. */}
           </p>
         </div>
         <div className="about-grid">

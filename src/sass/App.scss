@@ -44,24 +44,62 @@ ul {
   padding: 0;
 }
 
+// Scrollbar
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #151728;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1488fa;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #064583;
+}
+
 .app {
   &-container {
+    min-height: 100vh;
+    max-width: 3000px;
+    margin: 0 auto;
     display: flex;
+    align-items: stretch;
   }
 
   &-item {
     &--GithubFeed {
-      flex-basis: 15%;
+      flex-basis: 20%;
+      padding: 2rem;
+      border-radius: 6px;
+      margin-top: 2rem;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
     }
 
     &--Main {
-      flex-basis: 70%;
+      flex-basis: 80%;
       position: relative;
       overflow: hidden;
     }
 
     &--SocialMedia {
-      flex-basis: 15%;
+      //flex-basis: 15%;
+      display: none;
+      border-radius: 6px;
+
+      margin-top: 2rem;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
     }
   }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Footer from "./Footer";
 import SocialMedia from "./SocialMedia";
@@ -7,17 +7,15 @@ import Main from "./Main";
 
 import "../sass/App.scss";
 
-export class App extends Component {
-  render() {
-    return (
-      <div className="app-container">
-        <GithubFeed />
-        <Main />
-        <SocialMedia />
-        {/* <Footer /> */}
-      </div>
-    );
-  }
+export function App() {
+  return (
+    <div className="app-container">
+      <GithubFeed />
+      <Main />
+      <SocialMedia />
+      {/* <Footer /> */}
+    </div>
+  );
 }
 
 export default App;

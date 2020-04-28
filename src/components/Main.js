@@ -25,8 +25,8 @@ function Main() {
             <video autoPlay muted loop className="header-video">
               <source src={Video} type="video/mp4" />
             </video>
+            <div className="main-overlay"></div>
           </div>
-          <div className="main-overlay"></div>
           {/* <Nav /> */}
           <div className="main-container">
             <Header />

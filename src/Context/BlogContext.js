@@ -1,18 +1,18 @@
 import React, { createContext, useState, useEffect } from "react";
 
-export const PagesContext = createContext({});
+export const BlogContext = createContext({});
 
-export const PagesContextProvider = (props) => {
-  const [pages, setPages] = useState([]);
+export const BlogContextProvider = (props) => {
+  const [posts, setPosts] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
-  const fetchPages = () => {
-    console.log("fetching Pages");
-    fetch("https://vdomarkas.com/wp/wp-json/wp/v2/pages")
+  const fetchPosts = () => {
+    console.log("fetching Posts");
+    fetch("https://vdomarkas.com/wp/wp-json/wp/v2/posts")
       .then((response) => response.json())
       .then((data) => {
-        setPages(data);
+        setPosts(data);
         setLoading(false);
       })
       .catch((err) => {
@@ -22,16 +22,16 @@ export const PagesContextProvider = (props) => {
 
   useEffect(() => {
     setLoading(true);
-    fetchPages();
+    fetchPosts();
     // eslint-disable-next-line
   }, []);
 
   if (!loading) {
-    console.log("pages", pages);
+    console.log("posts", posts);
     return (
-      <PagesContext.Provider value={{ pages }}>
+      <BlogContext.Provider value={{ posts }}>
         {props.children}
-      </PagesContext.Provider>
+      </BlogContext.Provider>
     );
   } else {
     return null;
