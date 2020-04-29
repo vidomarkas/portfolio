@@ -6,7 +6,6 @@ function Projects() {
   return (
     <div>
       <Tabs />
-
       <ProjectGallery />
     </div>
   );

@@ -18,7 +18,7 @@
     margin-left: 2rem;
     margin-bottom: 2rem;
     border-radius: 4px;
-    background-color: #151728c5;
+    background-color: #151728;
     transition: all 0.2s;
     display: flex;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -37,17 +37,6 @@
     width: 200px;
     background-position: center center;
     background-size: cover;
-
-    &-overlay {
-      opacity: 1;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #00000083;
-      transition: opacity 0.3s;
-    }
   }
   &-content {
     flex-basis: 70%;
@@ -74,7 +63,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     &-item {
-      background-color: #1488fa;
+      background-color: #1487faa6;
       color: #151728;
       border-radius: 2px;
       display: inline-block;
@@ -119,8 +108,4 @@
       margin-left: 0.5rem;
     }
   }
-}
-
-.color-js {
-  background-color: #d4c70bc5;
 }

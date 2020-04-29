@@ -4,19 +4,17 @@ import { Link } from "react-router-dom";
 const ProjectGalleryItem = ({ project, index }) => {
   return (
     <div className="project-gallery-item">
-      <div
-        className="project-image"
-        style={{
-          backgroundImage: `url(${project.acf.main_image})`,
-        }}
-      >
-        <Link to={{ pathname: `/project/${project.slug}` }}>
-          <div className="project-image-overlay"></div>
-        </Link>
-      </div>
+      <Link to={{ pathname: `/project/${project.slug}` }}>
+        <div
+          className="project-image"
+          style={{
+            backgroundImage: `url(${project.acf.main_image})`,
+          }}
+        ></div>
+      </Link>
       <div className="project-content">
         <h2 className="project-title">{project.title.rendered}</h2>
-
+        {project.acf.short_description}
         <ul className="project-list">
           {project.acf.technologies.map((tech, index) => {
             return (

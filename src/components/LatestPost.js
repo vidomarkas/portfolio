@@ -8,7 +8,7 @@ import "../sass/LatestPost.scss";
 function LatestPost() {
   return (
     <div className="card latest-post">
-      <h2 className="card-heading latest-post-heading">Latest post</h2>
+      <h2 className="card-heading latest-post-heading">Latest blog post</h2>
       <img className="card-img" src={exampleImg} alt="post image" />
       <div className="latest-post-body">
         {/* <h2 className="card-heading">Latest post</h2> */}

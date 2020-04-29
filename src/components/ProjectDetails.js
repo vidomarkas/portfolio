@@ -80,11 +80,6 @@ export default function ProjectDetails({ location }) {
     return (
       <>
         <div className="projectDetails__body">
-          <header
-          //  className="projectDetails__header"
-          >
-            {showImageSlider()}
-          </header>
           <div className="story">
             <h2 className="story-title">{project.title.rendered}</h2>
 
@@ -115,6 +110,9 @@ export default function ProjectDetails({ location }) {
                   Visit website
                 </a>
               ) : null}
+              <header className="projectDetails__header">
+                {showImageSlider()}
+              </header>
             </div>
             {project.acf.date ? (
               <section className="story-section">
@@ -167,13 +165,9 @@ export default function ProjectDetails({ location }) {
             {project.acf.website_type.length > 0 ? (
               <section className="story-section">
                 <h3 className="story-section-label">Website type</h3>
-                <ul className="story-section-list">
+                <ul className="story-section-paragraph">
                   {project.acf.website_type.map((type, index) => {
-                    return (
-                      <li className="story-section-list-item" key={index}>
-                        {type}
-                      </li>
-                    );
+                    return <li key={index}>{type}</li>;
                   })}
                 </ul>
               </section>
@@ -205,12 +199,9 @@ export default function ProjectDetails({ location }) {
               </section>
             ) : null}
 
-            <Link className="button-link" to="https://vdomarkas.com/projects">
+            <Link className="button-link" to="/projects/">
               ‹ Back
             </Link>
-            {/* <Link className="button-link" to="/">
-              See another project &#8250;
-            </Link> */}
           </div>
         </div>
       </>
