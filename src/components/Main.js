@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./Header";
-import Nav from "./Nav";
+// import Nav from "./Nav";
 import "../sass/Main.scss";
-import bg from "../assets/img/main-bg.jpg";
 
 import Hello from "../pages/Hello";
 import About from "../pages/About";

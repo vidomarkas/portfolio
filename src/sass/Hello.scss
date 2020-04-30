@@ -83,6 +83,30 @@
       }
     }
 
+    &-response-box {
+      background-color: #1b1d2e;
+      border-radius: 4px;
+      padding: 1rem;
+      margin-top: 2rem;
+      display: none;
+
+      & p {
+        font-size: 1.6rem;
+        margin: 0;
+      }
+      &-success {
+        color: greenyellow;
+      }
+
+      &-error {
+        color: rgb(255, 0, 98);
+      }
+
+      &-warning {
+        color: orange;
+      }
+    }
+
     &-btn {
       background-color: #1488fa;
       border: none;

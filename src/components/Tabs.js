@@ -16,6 +16,7 @@ function Tabs() {
       if (!list.includes(project.acf.category)) {
         list.push(project.acf.category);
       }
+      return null;
     });
     setCategories([...list]);
   };

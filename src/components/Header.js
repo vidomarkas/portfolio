@@ -1,18 +1,14 @@
-import React, { useState, useContext, useEffect } from "react";
+import React from "react";
 
 import "../sass/Header.scss";
 import photo from "../assets/img/photo.png";
-import bg from "../assets/img/main-bg.jpg";
 import HeaderTabs from "./HeaderTabs";
 import Video from "../assets/video/vid.mp4";
 
 function Header() {
   return (
     <header className="header">
-      <div
-        className="header-background"
-        // style={{ backgroundImage: `url(${bg})` }}
-      >
+      <div className="header-background">
         <video autoPlay muted loop className="header-video">
           <source src={Video} type="video/mp4" />
         </video>

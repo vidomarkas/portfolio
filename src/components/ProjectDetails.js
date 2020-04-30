@@ -91,7 +91,7 @@ export default function ProjectDetails({ location }) {
             <div className="story-links">
               {project.acf.code_link ? (
                 <a
-                  className="button-link"
+                  className="btn btn-secondary"
                   href={project.acf.code_link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -102,7 +102,7 @@ export default function ProjectDetails({ location }) {
 
               {project.acf.live_link ? (
                 <a
-                  className="button-link"
+                  className="btn btn-secondary"
                   href={project.acf.live_link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -178,6 +178,7 @@ export default function ProjectDetails({ location }) {
                 <h3 className="story-section-label">Video</h3>
                 <div className="story-section-description">
                   <iframe
+                    title="yt_video"
                     width="560"
                     height="315"
                     src={project.acf.video}
@@ -199,7 +200,7 @@ export default function ProjectDetails({ location }) {
               </section>
             ) : null}
 
-            <Link className="button-link" to="/projects/">
+            <Link className="btn btn-secondary" to="/projects/">
               ‹ Back
             </Link>
           </div>

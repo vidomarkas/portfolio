@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import ProjectImg from "../assets/img/example.jpg";
 import "../sass/LatestProject.scss";
 import { ProjectContext } from "../Context/ProjectContext";
 
@@ -15,7 +14,7 @@ function LatestProject() {
           {project.acf.main_image ? (
             <img
               src={project.acf.main_image}
-              alt="project image"
+              alt={project.title.rendered}
               className="latest-project-left-image"
             />
           ) : (

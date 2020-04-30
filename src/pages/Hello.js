@@ -5,6 +5,7 @@ import heart from "../assets/img/heart.svg";
 import "../sass/Hello.scss";
 import LatestPost from "../components/LatestPost";
 import LatestProject from "../components/LatestProject";
+import HelloMessage from "../components/HelloMessage";
 
 function Hello() {
   return (
@@ -31,6 +32,7 @@ function Hello() {
                   {" "}
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.google.com/maps/place/Gravesend/data=!4m2!3m1!1s0x47d8b412568e0b3f:0x4acb4760cd850e75?sa=X&ved=2ahUKEwiF0eavwYnpAhUnREEAHXEeB4kQ8gEwMXoECBwQBA"
                   >
                     Gravesend, Kent
@@ -51,33 +53,7 @@ function Hello() {
         <LatestPost />
       </div>
       <div className="hello-right">
-        <div className="card card-padding">
-          <h2 className="card-heading">Message</h2>
-          <form action="" className="hello-message">
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="4"
-              placeholder="Write something to Viktoras..."
-            ></textarea>
-            <div className="hello-message-wrapper">
-              <input
-                className="hello-message-email"
-                type="email"
-                name="email"
-                id=""
-                placeholder="Email"
-              />
-
-              <input
-                type="submit"
-                value="Send"
-                className="btn hello-message-btn"
-              />
-            </div>
-          </form>
-        </div>
+        <HelloMessage />
         <LatestProject />
       </div>
     </div>

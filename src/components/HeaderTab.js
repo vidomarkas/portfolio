@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 function HeaderTab(props) {
@@ -6,7 +6,7 @@ function HeaderTab(props) {
     <Link
       onClick={() => props.onClickTabItem(props.slug)}
       className={
-        props.active == props.slug
+        props.active === props.slug
           ? "header-link header-link--active"
           : "header-link"
       }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import SocialMedia from "./SocialMedia";
 import GithubFeed from "./GithubFeed";
 import Main from "./Main";

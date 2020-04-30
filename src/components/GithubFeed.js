@@ -29,7 +29,6 @@ function GithubFeed() {
   }, []);
 
   if (!loading) {
-    console.log("repos", repos);
     return (
       <div
         className=" app-item app-item--GithubFeed"
@@ -44,7 +43,12 @@ function GithubFeed() {
             <ul className="github-feed-list">
               {repos.map((repo, index) => {
                 return index < 5 ? (
-                  <a key={index} target="_blank" href={repo.html_url}>
+                  <a
+                    key={index}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={repo.html_url}
+                  >
                     <li className="github-feed-list-item">
                       <h3 className="github-feed-list-item-title">
                         {repo.name}

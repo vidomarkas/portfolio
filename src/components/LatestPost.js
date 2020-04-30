@@ -9,7 +9,7 @@ function LatestPost() {
   return (
     <div className="card latest-post">
       <h2 className="card-heading latest-post-heading">Latest blog post</h2>
-      <img className="card-img" src={exampleImg} alt="post image" />
+      <img className="card-img" src={exampleImg} alt="post name" />
       <div className="latest-post-body">
         {/* <h2 className="card-heading">Latest post</h2> */}
         <h3 className="latest-post-title">How to eat sleep code repeat</h3>
