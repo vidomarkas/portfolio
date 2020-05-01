@@ -7,10 +7,12 @@ import "../sass/Main.scss";
 import Hello from "../pages/Hello";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import Blog from "../pages/Blog";
 import Projects from "../pages/Projects";
 import Video from "../assets/video/vid.mp4";
 
 import ProjectDetails from "./ProjectDetails";
+import NotFound from "./NotFound";
 
 function Main() {
   return (
@@ -34,7 +36,9 @@ function Main() {
               <Route exact path="/about" component={About} />
               <Route exact path="/projects" component={Projects} />
               <Route exact path="/contact" component={Contact} />
+              <Route exact path="/blog" component={Blog} />
               <Route path="/project" component={ProjectDetails} />
+              <Route path="*" exact={true} component={NotFound} />
             </Switch>
           </div>
         </div>
