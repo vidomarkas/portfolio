@@ -1,8 +1,6 @@
-.latest-project {
-  &-container {
-    display: flex;
-  }
+@import "./mixins.scss";
 
+.latest-project {
   &-image-placeholder {
     border: 1px solid #1488fa;
     height: 100%;

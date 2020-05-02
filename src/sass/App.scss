@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 @font-face {
   font-family: FontX;
   src: url("../assets/fonts/fontregular.woff2");
@@ -84,12 +86,18 @@ ul {
       margin-left: 2rem;
       margin-bottom: 2rem;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      @include maxw(1174) {
+        display: none;
+      }
     }
 
     &--Main {
       flex-basis: 80%;
       position: relative;
       overflow: hidden;
+      @include maxw(1174) {
+        flex-basis: 100%;
+      }
     }
 
     &--SocialMedia {
@@ -119,6 +127,7 @@ ul {
   font-size: 1.4rem;
   line-height: 1.4rem;
   transition: all 0.3s;
+  white-space: nowrap;
 
   &:hover {
     box-shadow: none;

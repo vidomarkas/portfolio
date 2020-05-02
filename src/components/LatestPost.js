@@ -11,30 +11,24 @@ function LatestPost() {
   let cleanExcerpt = post.excerpt.rendered.replace(/<\/?[^>]+(>|$)/g, "");
   console.log("post", post);
   return (
-    <div className="card latest-post">
-      <h2 className="card-heading latest-post-heading">Latest blog post</h2>
+    <div className="card latest">
+      <h2 className="card-heading latest-heading">Latest blog post</h2>
       <img
         className="card-img"
         src={post.featured_image_src}
         alt={post.title.rendered}
       />
-      <div className="latest-post-body">
-        {/* <h2 className="card-heading">Latest post</h2> */}
-        <h3 className="latest-post-title">{post.title.rendered}</h3>
-
-        <div className="latest-post-content">
-          <p>
-            {cleanExcerpt}
-            {/* Some quick example text to build on the card title and make up the
-            bulk of the card's content. */}
-          </p>
+      <div className="latest-body">
+        <h3 className="latest-title">{post.title.rendered}</h3>
+        <div className="latest-content">
+          <p>{cleanExcerpt}</p>
         </div>
-        <div className="latest-post-details">
-          <div className="latest-post-details">
+        <div className="latest-details">
+          <div className="latest-date">
             <img src={Calendar} alt="date" />
             <span>{post.date.slice(0, 10)}</span>
           </div>
-          <Link to={`/post/${post.slug}`} className="btn latest-post-btn">
+          <Link to={`/post/${post.slug}`} className="btn latest-btn">
             Read
           </Link>
         </div>

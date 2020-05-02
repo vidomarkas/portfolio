@@ -1,4 +1,4 @@
-.latest-post {
+.latest {
   padding: 0;
   padding-top: 2rem;
 
@@ -24,10 +24,7 @@
     }
   }
 
-  &-details {
-    display: flex;
-    justify-content: flex-end;
-
+  &-date {
     & img {
       height: 1.6rem;
       margin-right: 1rem;
@@ -35,6 +32,11 @@
     & span {
       font-size: 1.3rem;
     }
+  }
+
+  &-details {
+    display: flex;
+    justify-content: flex-end;
   }
 
   &-btn {

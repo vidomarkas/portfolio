@@ -50,11 +50,11 @@ function Hello() {
             </div>
           </div>
         </div>
-        <LatestPost />
+        <LatestProject />
       </div>
       <div className="hello-right">
         <HelloMessage />
-        <LatestProject />
+        <LatestPost />
       </div>
     </div>
   );
