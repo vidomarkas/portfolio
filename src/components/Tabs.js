@@ -4,11 +4,13 @@ import "../sass/Tabs.scss";
 import Tab from "./Tab";
 
 function Tabs() {
-  const { projects, filterProjects } = useContext(ProjectContext);
+  const { projects, filterProjects, activeTab, setActiveTab } = useContext(
+    ProjectContext
+  );
 
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState("all");
+  //const [activeTab, setActiveTab] = useState("all");
 
   const getTabLabels = () => {
     const list = ["all", ...categories];

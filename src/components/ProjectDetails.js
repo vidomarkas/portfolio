@@ -60,7 +60,7 @@ export default function ProjectDetails({ location }) {
           <AutoplaySlider
             play={true}
             cancelOnInteraction={false} // should stop playing on user interaction
-            interval={6000}
+            interval={5000}
             animation="cubeAnimation"
             cssModule={AwesomeSliderStyles}
             bullets={false}
@@ -82,130 +82,134 @@ export default function ProjectDetails({ location }) {
   if (project) {
     return (
       <>
-        <div className="projectDetails__body">
-          <div className="story">
-            <h2 className="story-title">{project.title.rendered}</h2>
+        <div className="project-details">
+          <div className="project-details-container">
+            <div className="story">
+              <h2 className="story-title">{project.title.rendered}</h2>
 
-            {project.acf.short_description ? (
-              <h3 className="story-title-secondary">
-                {project.acf.short_description}
-              </h3>
-            ) : null}
-            <div className="story-links">
-              {project.acf.code_link ? (
-                <a
-                  className="btn btn-secondary"
-                  href={project.acf.code_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Code on GitHub
-                </a>
+              {project.acf.short_description ? (
+                <h3 className="story-title-secondary">
+                  {project.acf.short_description}
+                </h3>
+              ) : null}
+              <div className="story-links">
+                {project.acf.code_link ? (
+                  <a
+                    className="btn btn-secondary"
+                    href={project.acf.code_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Code on GitHub
+                  </a>
+                ) : null}
+
+                {project.acf.live_link ? (
+                  <a
+                    className="btn btn-secondary"
+                    href={project.acf.live_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit website
+                  </a>
+                ) : null}
+                <header className="project-details-header">
+                  {showImageSlider()}
+                </header>
+              </div>
+              {project.acf.date ? (
+                <section className="story-section">
+                  <h3 className="story-section-label">Date</h3>
+                  <p className="story-section-paragraph">{project.acf.date}</p>
+                </section>
               ) : null}
 
-              {project.acf.live_link ? (
-                <a
-                  className="btn btn-secondary"
-                  href={project.acf.live_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit website
-                </a>
+              {project.acf.technologies ? (
+                <section className="story-section">
+                  <h3 className="story-section-label">Technologies</h3>
+                  <ul className="story-section-list">
+                    {project.acf.technologies.map((tech, index) => {
+                      return (
+                        <li className="story-section-list-item" key={index}>
+                          {tech}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
               ) : null}
-              <header className="projectDetails__header">
-                {showImageSlider()}
-              </header>
+
+              {project.acf.tools.length > 0 ? (
+                <section className="story-section">
+                  <h3 className="story-section-label">Tools</h3>
+                  <ul className="story-section-list">
+                    {project.acf.tools.map((tool, index) => {
+                      return (
+                        <li className="story-section-list-item" key={index}>
+                          {tool}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              ) : null}
+
+              {project.acf.services_provided.length > 0 ? (
+                <section className="story-section">
+                  <h3 className="story-section-label">Services provided</h3>
+                  <ul className="story-section-paragraph">
+                    {project.acf.services_provided.map((service, index) => {
+                      return <li key={index}>{service}</li>;
+                    })}
+                  </ul>
+                </section>
+              ) : null}
+
+              {project.acf.website_type.length > 0 ? (
+                <section className="story-section">
+                  <h3 className="story-section-label">Website type</h3>
+                  <ul className="story-section-paragraph">
+                    {project.acf.website_type.map((type, index) => {
+                      return <li key={index}>{type}</li>;
+                    })}
+                  </ul>
+                </section>
+              ) : null}
+
+              {project.acf.video ? (
+                <section className="story-section">
+                  <h3 className="story-section-label">Video</h3>
+                  <div className="story-section-description">
+                    <iframe
+                      title="yt_video"
+                      width="560"
+                      height="315"
+                      src={project.acf.video}
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </section>
+              ) : null}
+
+              {project.content ? (
+                <section className="story-section">
+                  <h3 className="story-section-label">Description</h3>
+                  <div
+                    className="story-section-description"
+                    dangerouslySetInnerHTML={{
+                      __html: project.content.rendered,
+                    }}
+                  ></div>
+                </section>
+              ) : null}
+
+              <Link className="btn btn-secondary" to="/projects/">
+                ‹ Back
+              </Link>
             </div>
-            {project.acf.date ? (
-              <section className="story-section">
-                <h3 className="story-section-label">Date</h3>
-                <p className="story-section-paragraph">{project.acf.date}</p>
-              </section>
-            ) : null}
-
-            {project.acf.technologies ? (
-              <section className="story-section">
-                <h3 className="story-section-label">Technologies</h3>
-                <ul className="story-section-list">
-                  {project.acf.technologies.map((tech, index) => {
-                    return (
-                      <li className="story-section-list-item" key={index}>
-                        {tech}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
-            ) : null}
-
-            {project.acf.tools.length > 0 ? (
-              <section className="story-section">
-                <h3 className="story-section-label">Tools</h3>
-                <ul className="story-section-list">
-                  {project.acf.tools.map((tool, index) => {
-                    return (
-                      <li className="story-section-list-item" key={index}>
-                        {tool}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
-            ) : null}
-
-            {project.acf.services_provided.length > 0 ? (
-              <section className="story-section">
-                <h3 className="story-section-label">Services provided</h3>
-                <ul className="story-section-paragraph">
-                  {project.acf.services_provided.map((service, index) => {
-                    return <li key={index}>{service}</li>;
-                  })}
-                </ul>
-              </section>
-            ) : null}
-
-            {project.acf.website_type.length > 0 ? (
-              <section className="story-section">
-                <h3 className="story-section-label">Website type</h3>
-                <ul className="story-section-paragraph">
-                  {project.acf.website_type.map((type, index) => {
-                    return <li key={index}>{type}</li>;
-                  })}
-                </ul>
-              </section>
-            ) : null}
-
-            {project.acf.video ? (
-              <section className="story-section">
-                <h3 className="story-section-label">Video</h3>
-                <div className="story-section-description">
-                  <iframe
-                    title="yt_video"
-                    width="560"
-                    height="315"
-                    src={project.acf.video}
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </section>
-            ) : null}
-
-            {project.content ? (
-              <section className="story-section">
-                <h3 className="story-section-label">Description</h3>
-                <div
-                  className="story-section-description"
-                  dangerouslySetInnerHTML={{ __html: project.content.rendered }}
-                ></div>
-              </section>
-            ) : null}
-
-            <Link className="btn btn-secondary" to="/projects/">
-              ‹ Back
-            </Link>
           </div>
         </div>
       </>

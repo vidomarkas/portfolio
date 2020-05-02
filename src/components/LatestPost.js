@@ -34,7 +34,7 @@ function LatestPost() {
             <img src={Calendar} alt="date" />
             <span>{post.date.slice(0, 10)}</span>
           </div>
-          <Link to={`/blog/${post.slug}`} className="btn latest-post-btn">
+          <Link to={`/post/${post.slug}`} className="btn latest-post-btn">
             Read
           </Link>
         </div>

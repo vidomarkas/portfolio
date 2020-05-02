@@ -3,7 +3,7 @@ import React from "react";
 import "../sass/Header.scss";
 import photo from "../assets/img/photo.png";
 import HeaderTabs from "./HeaderTabs";
-import Video from "../assets/video/vid.mp4";
+import Video from "../assets/video/vid.webm";
 
 function Header() {
   return (

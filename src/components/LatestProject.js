@@ -4,8 +4,8 @@ import "../sass/LatestProject.scss";
 import { ProjectContext } from "../Context/ProjectContext";
 
 function LatestProject() {
-  const { filteredProjects } = useContext(ProjectContext);
-  const project = filteredProjects[0];
+  const { projects } = useContext(ProjectContext);
+  const project = projects[0];
 
   return (
     <div className="card card-padding">

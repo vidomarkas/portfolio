@@ -7,10 +7,10 @@ export const ProjectContextProvider = (props) => {
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState("all");
 
   const fetchProjects = () => {
-    console.log('fetching Projects')
-    fetch("https://viktorasd5.sg-host.com/wp/wp-json/wp/v2/projects")
+    fetch("https://vdomarkas.com/wp/wp-json/wp/v2/projects")
       .then((response) => response.json())
       .then((data) => {
         setProjects([...data]);
@@ -28,6 +28,7 @@ export const ProjectContextProvider = (props) => {
   }, []);
 
   const filterProjects = (category) => {
+    setActiveTab(category);
     if (category === "all") {
       setFilteredProjects([...projects]);
     } else {
@@ -48,7 +49,14 @@ export const ProjectContextProvider = (props) => {
     console.log("projects", projects);
     return (
       <ProjectContext.Provider
-        value={{ projects, filteredProjects, filterProjects, loading }}
+        value={{
+          projects,
+          filteredProjects,
+          filterProjects,
+          loading,
+          activeTab,
+          setActiveTab,
+        }}
       >
         {props.children}
       </ProjectContext.Provider>
