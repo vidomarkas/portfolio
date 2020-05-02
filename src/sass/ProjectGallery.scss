@@ -22,7 +22,14 @@
     transition: all 0.2s;
     display: flex;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    overflow: hidden;
+    // overflow: hidden;
+    position: relative;
+    background: rgb(50, 10, 19);
+    background: radial-gradient(
+      circle,
+      rgba(36, 39, 59, 0.4498079016762955) 0%,
+      #151728 100%
+    );
     &:hover .project-image-overlay {
       opacity: 0;
     }
@@ -32,11 +39,21 @@
 .project {
   &-image {
     flex-basis: 40%;
-    position: relative;
+
     height: 200px;
-    width: 200px;
-    background-position: center center;
-    background-size: cover;
+    width: 220px;
+    // background-position: center center;
+    // background-size: cover;
+    transform: translateX(-20px);
+
+    & img {
+      width: 100%;
+      border-radius: 6px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
   }
   &-content {
     flex-basis: 70%;

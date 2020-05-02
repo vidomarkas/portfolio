@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProjectGalleryItem = ({ project, index }) => {
+const ProjectGalleryItem = ({ project }) => {
   return (
     <div className="project-gallery-item">
       <Link to={{ pathname: `/project/${project.slug}` }}>
         <div
           className="project-image"
-          style={{
-            backgroundImage: `url(${project.acf.main_image})`,
-          }}
-        ></div>
+          // style={{
+          //   backgroundImage: `url(${project.acf.main_image})`,
+          // }}
+        >
+          <img src={project.acf.main_image} alt="" />
+        </div>
       </Link>
       <div className="project-content">
         <h2 className="project-title">{project.title.rendered}</h2>

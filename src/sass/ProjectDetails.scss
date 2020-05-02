@@ -35,7 +35,7 @@
 }
 
 .story {
-  margin: 0 auto 7em auto;
+  margin: 0 auto 7rem auto;
   width: 70%;
   color: #858685;
   font-size: 1.8rem;
@@ -121,6 +121,7 @@
       text-align: left;
     }
     &-description {
+      margin-bottom: 4rem;
       & h1,
       h2,
       h3,

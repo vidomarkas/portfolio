@@ -1,12 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProjectContext } from "../Context/ProjectContext";
-import NotFound from "./NotFound";
+
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
-import "../sass/ProjectDetails.scss";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 import AwesomeSliderStyles from "react-awesome-slider/src/styles";
+
+import NotFound from "./NotFound";
+
+import "../sass/ProjectDetails.scss";
 
 export default function ProjectDetails({ location }) {
   // State

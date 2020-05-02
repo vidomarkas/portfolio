@@ -12,6 +12,7 @@ import Projects from "../pages/Projects";
 import Video from "../assets/video/vid.mp4";
 
 import ProjectDetails from "./ProjectDetails";
+import BlogDetails from "./BlogDetails";
 import NotFound from "./NotFound";
 
 function Main() {
@@ -38,7 +39,8 @@ function Main() {
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/blog" component={Blog} />
               <Route path="/project" component={ProjectDetails} />
-              <Route path="*" exact={true} component={NotFound} />
+              <Route path="/post" component={BlogDetails} />
+              <Route exact path="*" component={NotFound} />
             </Switch>
           </div>
         </div>
