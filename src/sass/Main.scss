@@ -1,9 +1,13 @@
+@import "./mixins.scss";
+
 .main {
   &-container {
     display: flex;
     flex-direction: column;
-    // position: relative;
     padding: 2rem;
+    @include maxw(628) {
+      padding: 1rem;
+    }
   }
 
   &-overlay {
