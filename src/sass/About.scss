@@ -15,6 +15,9 @@
     max-width: 120rem;
     margin: 0 auto;
     position: relative;
+    @include maxw(483) {
+      width: 90%;
+    }
   }
 
   &-paragraph {
@@ -27,5 +30,11 @@
   &-header {
     width: 50%;
     margin: 4rem auto;
+    @include maxw(890) {
+      width: 75%;
+    }
+    @include maxw(483) {
+      width: 100%;
+    }
   }
 }

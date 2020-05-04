@@ -1,63 +1,108 @@
 @import "./mixins.scss";
 
-.latest-project {
-  &-image-placeholder {
-    border: 1px solid #1488fa;
+.latest {
+  position: relative;
+  overflow: hidden;
+  min-height: 30rem;
+
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    border-radius: 6px;
+    background-position: center center;
+    background-size: cover;
+
+    &-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #151728;
+
+      background: radial-gradient(
+        circle,
+        rgba(36, 39, 59, 0.4498079016762955) 0%,
+        #151728 100%
+      );
+    }
+  }
+
+  &-heading {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    position: relative;
+  }
+
+  &-body {
+    padding: 2rem;
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    &-text {
-      font-size: 4rem;
-      color: rgba(255, 255, 255, 0.24);
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &-title {
+    color: #fff;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    margin-bottom: 1rem;
+  }
+
+  &-description {
+    margin: 0;
+    margin-bottom: 1rem;
+    color: #c3c5d5;
+  }
+
+  &-content {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    & p {
       margin: 0;
     }
   }
 
-  &-left {
-    &-container {
-      flex-basis: 50%;
-    }
-
-    &-image {
-      width: 100%;
-      border-radius: 6px;
-    }
-
-    &-tech {
-    }
-  }
-
-  &-right {
-    &-container {
-      padding-left: 2rem;
-      flex-basis: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  }
-
-  &-title {
-    font-size: 2rem;
-    margin-top: 0;
-  }
-
-  &-body {
-    margin: 0;
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
-  }
-
-  &-content {
+  &-details {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  &-controls {
-    display: flex;
+    align-items: flex-end;
     justify-content: flex-end;
+    margin-bottom: 2rem;
+    flex-direction: column;
+  }
+
+  &-btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.301);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.301);
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    outline: none;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    transition: all 0.3s;
+    white-space: nowrap;
+    margin-left: 1rem;
+
+    @include minmaxw(700, 832) {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    @include maxw(408) {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    &:hover {
+      background-color: #fff;
+      color: #151728;
+    }
   }
 }

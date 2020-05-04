@@ -1,7 +1,4 @@
 .github-feed {
-  &-container {
-  }
-
   &-title {
     color: #fff;
     font-size: 2rem;
@@ -11,8 +8,6 @@
     margin-left: 0.5rem;
   }
 
-  &-repo {
-  }
   &-list {
     &-item {
       margin-bottom: 2rem;
@@ -21,7 +16,7 @@
       padding: 1rem;
       transition: 0.3s;
       &:hover {
-        background-color: rgba(255, 255, 255, 0.061);
+        background-color: #262a42;
       }
       &-title {
         color: #fff;

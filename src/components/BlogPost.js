@@ -5,11 +5,13 @@ function BlogPost({ post }) {
   let cleanExcerpt = post.excerpt.rendered.replace(/<\/?[^>]+(>|$)/g, "");
   return (
     <div className="card blog-item">
-      <Link to={{ pathname: `/blog/${post.slug}` }}>
-        <div className="blog-item-image">
-          <img src={post.featured_image_src} alt={post.title.rendered} />
-        </div>
-      </Link>
+      <div className="blog-item-image-container">
+        <div
+          className="blog-item-image"
+          style={{ backgroundImage: `url(${post.featured_image_src})` }}
+        ></div>
+      </div>
+
       <div className="blog-item-content">
         <h3 className="blog-item-title">{post.title.rendered}</h3>
         <p className="blog-item-excerpt">{cleanExcerpt}</p>

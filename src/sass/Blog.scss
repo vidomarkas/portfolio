@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 .blog {
   &-container {
     width: 100%;
@@ -10,39 +12,53 @@
 
   &-item {
     flex-basis: 44%;
-    margin-left: 2rem;
+    min-width: 44.5rem;
+    min-height: 200px;
+    margin-left: 4rem;
     margin-bottom: 2rem;
     border-radius: 4px;
     background-color: #151728;
     transition: all 0.2s;
     display: flex;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    // overflow: hidden;
     position: relative;
 
+    @include maxw(900) {
+      margin-left: 2rem;
+    }
+    @include maxw(483) {
+      // flex-direction: column;
+      // min-width: calc(100% - 2rem);
+    }
+
+    &-image-container {
+      flex-basis: 45%;
+      min-width: 180px;
+      min-height: 20rem;
+      @include maxw(483) {
+        flex-basis: 40%;
+        min-width: 140px;
+      }
+    }
+
     &-image {
-      flex-basis: 40%;
-
-      height: 200px;
+      height: 160px;
       width: 220px;
-      // background-position: center center;
-      // background-size: cover;
-      transform: translateX(-20px);
-
-      & img {
-        width: 100%;
-        border-radius: 6px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-          0 6px 6px rgba(0, 0, 0, 0.23);
+      top: 50%;
+      background-position: center center;
+      background-size: cover;
+      transform: translate(-2rem, -50%);
+      border-radius: 6px;
+      position: absolute;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      @include maxw(483) {
+        height: 120px;
+        width: 165px;
       }
     }
 
     &-content {
-      //border: 1px solid rgb(255, 0, 255);
-      flex-basis: 100%;
+      flex-basis: 60%;
       padding: 2rem;
       position: relative;
     }
