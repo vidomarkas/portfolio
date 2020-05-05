@@ -148,6 +148,9 @@
       margin-left: auto;
       outline: none;
       transition: all 0.3s;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
       &:hover {
         box-shadow: none;
       }

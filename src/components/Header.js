@@ -9,7 +9,14 @@ function Header() {
   return (
     <header className="header">
       <div className="header-background">
-        <video autoPlay muted loop className="header-video">
+        <video
+          autoPlay
+          muted
+          loop
+          className="header-video"
+          playsInline="true"
+          disablePictureInPicture="true"
+        >
           <source src={Video} type="video/mp4" />
         </video>
       </div>
