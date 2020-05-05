@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./Header";
-// import Nav from "./Nav";
 import "../sass/Main.scss";
 
 import Hello from "../pages/Hello";
@@ -14,22 +13,21 @@ import Video from "../assets/video/vid.mp4";
 import ProjectDetails from "./ProjectDetails";
 import BlogDetails from "./BlogDetails";
 import NotFound from "./NotFound";
+import ScrollToTop from "./ScrollToTop";
 
 function Main() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <div className="app-item app-item--Main ">
-          <div
-            className="main-background"
-            // style={{ backgroundImage: `url(${bg})` }}
-          >
+          <div className="main-background">
             <video autoPlay muted loop className="header-video">
               <source src={Video} type="video/mp4" />
             </video>
             <div className="main-overlay"></div>
           </div>
-          {/* <Nav /> */}
+
           <div className="main-container">
             <Header />
             <Switch>

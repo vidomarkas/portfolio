@@ -7,7 +7,7 @@ import Main from "./Main";
 import "../sass/App.scss";
 
 export function App() {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   if (width <= 1174) {
     return (

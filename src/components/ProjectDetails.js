@@ -95,7 +95,7 @@ export default function ProjectDetails({ location }) {
               <div className="story-links">
                 {project.acf.code_link ? (
                   <a
-                    className="btn btn-secondary"
+                    className="btn btn-secondary  project-details-link"
                     href={project.acf.code_link}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -106,7 +106,7 @@ export default function ProjectDetails({ location }) {
 
                 {project.acf.live_link ? (
                   <a
-                    className="btn btn-secondary"
+                    className="btn btn-secondary project-details-link"
                     href={project.acf.live_link}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -181,15 +181,16 @@ export default function ProjectDetails({ location }) {
                 <section className="story-section">
                   <h3 className="story-section-label">Video</h3>
                   <div className="story-section-description">
-                    <iframe
-                      title="yt_video"
-                      width="560"
-                      height="315"
-                      src={project.acf.video}
-                      frameborder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
+                    <div className="video-wrapper">
+                      <iframe
+                        // className="story-section-video"
+                        title="yt_video"
+                        src={project.acf.video}
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
                   </div>
                 </section>
               ) : null}
