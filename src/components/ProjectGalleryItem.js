@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 const ProjectGalleryItem = ({ project }) => {
   return (
     <div className="project-gallery-item">
-      <Link to={{ pathname: `/project/${project.slug}` }}>
+      <Link
+        className="project-image-link"
+        to={{ pathname: `/project/${project.slug}` }}
+      >
         <div className="project-image">
           <img src={project.acf.main_image} alt="" />
         </div>
