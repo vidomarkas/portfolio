@@ -12,7 +12,9 @@ function LatestProject() {
       <Link to={{ pathname: `/project/${project.slug}` }}>
         <div
           className="latest-background"
-          style={{ backgroundImage: `url(${project.acf.main_image})` }}
+          style={{
+            backgroundImage: `url(${project.acf.main_image.sizes.medium_large})`,
+          }}
         ></div>
         <div className="latest-background-overlay"></div>
         <h2 className="card-heading latest-heading">Latest project</h2>

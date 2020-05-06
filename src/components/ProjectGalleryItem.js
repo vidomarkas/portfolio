@@ -9,7 +9,7 @@ const ProjectGalleryItem = ({ project }) => {
         to={{ pathname: `/project/${project.slug}` }}
       >
         <div className="project-image">
-          <img src={project.acf.main_image} alt="" />
+          <img src={project.acf.main_image.sizes.medium} alt="" />
         </div>
       </Link>
       <div className="project-content">

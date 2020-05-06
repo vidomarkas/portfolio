@@ -13,7 +13,7 @@ function LatestPost() {
           <div className="latest-post-body">
             <img
               className="latest-post-img"
-              src={post.featured_image_src}
+              src={post.featured_image_src_thumbnail}
               alt={post.title.rendered}
             />
             <p className="latest-post-title">{post.title.rendered}</p>

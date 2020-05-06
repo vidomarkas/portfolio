@@ -8,7 +8,9 @@ function BlogPost({ post }) {
       <div className="blog-item-image-container">
         <div
           className="blog-item-image"
-          style={{ backgroundImage: `url(${post.featured_image_src})` }}
+          style={{
+            backgroundImage: `url(${post.featured_image_src_medium})`,
+          }}
         ></div>
       </div>
 

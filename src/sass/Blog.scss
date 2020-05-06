@@ -96,12 +96,9 @@
 }
 
 .single-post {
-  padding: 8rem 23%;
   text-align: center;
-
   border-radius: 6px;
   background-color: #151728;
-
   background: radial-gradient(
     circle,
     rgba(36, 39, 59, 0.4498079016762955) 0%,
@@ -109,8 +106,19 @@
   );
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
+  &-container {
+    width: 90%;
+    margin: 4rem auto;
+    & img {
+      width: 90%;
+      height: auto;
+    }
+  }
   &-heading {
-    font-size: 4rem;
+    font-size: 3rem;
+    @include maxw(483) {
+      font-size: 1.8rem;
+    }
   }
 
   &-date {
@@ -123,6 +131,7 @@
 
   &-content {
     margin-bottom: 4rem;
+    text-align: left;
     & h2 {
       font-size: 2.8em;
       line-height: 3.8rem;
@@ -132,6 +141,10 @@
     & p {
       font-size: 1.8rem;
       line-height: 3rem;
+    }
+    & img {
+      width: 90%;
+      height: auto;
     }
   }
 }

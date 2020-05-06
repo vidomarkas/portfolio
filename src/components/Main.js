@@ -8,8 +8,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Blog from "../pages/Blog";
 import Projects from "../pages/Projects";
-import Video from "../assets/video/vid.mp4";
-
+import Video from "../assets/video/header-vid-small.mp4";
 import ProjectDetails from "./ProjectDetails";
 import BlogDetails from "./BlogDetails";
 import NotFound from "./NotFound";
@@ -22,7 +21,14 @@ function Main() {
         <ScrollToTop />
         <div className="app-item app-item--Main ">
           <div className="main-background">
-            <video autoPlay muted loop className="header-video">
+            <video
+              playsInline={true}
+              disablePictureInPicture
+              autoPlay
+              muted
+              loop
+              className="header-video"
+            >
               <source src={Video} type="video/mp4" />
             </video>
             <div className="main-overlay"></div>
