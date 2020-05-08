@@ -10,13 +10,3 @@
     @content;
   }
 }
-
-// Examples
-// @include maxw(643) {
-//   font-size: 33px;
-//   line-height: 43px;
-// }
-// @include minmaxw(1039, 1500) {
-//   font-size: 33px;
-//   line-height: 43px;
-// }
