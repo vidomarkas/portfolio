@@ -46,7 +46,6 @@ export const ProjectContextProvider = (props) => {
   }, [loading]);
 
   if (!loading) {
-    console.log("projects", projects);
     return (
       <ProjectContext.Provider
         value={{

@@ -8,7 +8,6 @@ function GithubFeed() {
   const [loading, setLoading] = useState(true);
 
   const fetchRepos = () => {
-    console.log("fetching Repos");
     fetch(
       "https://api.github.com/users/vidomarkas/repos?type=public&sort=pushed&direction=desc"
     )

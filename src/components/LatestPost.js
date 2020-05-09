@@ -16,7 +16,10 @@ function LatestPost() {
               src={post.featured_image_src_thumbnail}
               alt={post.title.rendered}
             />
-            <p className="latest-post-title">{post.title.rendered}</p>
+            <p
+              className="latest-post-title"
+              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+            ></p>
           </div>
         </li>
       </Link>

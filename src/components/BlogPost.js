@@ -15,7 +15,10 @@ function BlogPost({ post }) {
       </div>
 
       <div className="blog-item-content">
-        <h3 className="blog-item-title">{post.title.rendered}</h3>
+        <h3
+          className="blog-item-title"
+          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+        ></h3>
         <p className="blog-item-excerpt">{cleanExcerpt}</p>
         <Link
           to={{ pathname: `/post/${post.slug}` }}

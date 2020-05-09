@@ -8,7 +8,6 @@ export const BlogContextProvider = (props) => {
   const [loading, setLoading] = useState(true);
 
   const fetchPosts = () => {
-    console.log("fetching Posts");
     fetch("https://vdomarkas.com/wp/wp-json/wp/v2/posts")
       .then((response) => response.json())
       .then((data) => {
@@ -27,7 +26,6 @@ export const BlogContextProvider = (props) => {
   }, []);
 
   if (!loading) {
-    console.log("posts", posts);
     return (
       <BlogContext.Provider value={{ posts }}>
         {props.children}

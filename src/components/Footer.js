@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../sass/Footer.scss";
 import github from "../assets/img/github.svg";
 import email from "../assets/img/email.svg";

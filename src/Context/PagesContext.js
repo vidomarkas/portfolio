@@ -8,7 +8,6 @@ export const PagesContextProvider = (props) => {
   const [loading, setLoading] = useState(true);
 
   const fetchPages = () => {
-    console.log("fetching Pages");
     fetch("https://vdomarkas.com/wp/wp-json/wp/v2/pages")
       .then((response) => response.json())
       .then((data) => {
@@ -27,7 +26,6 @@ export const PagesContextProvider = (props) => {
   }, []);
 
   if (!loading) {
-    console.log("pages", pages);
     return (
       <PagesContext.Provider value={{ pages }}>
         {props.children}

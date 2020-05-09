@@ -7,11 +7,14 @@ function BlogDetails({ location }) {
   const [currentPost] = posts.filter((post) => {
     return post.slug === location.pathname.slice(6);
   });
-  console.log("currentPost", currentPost);
+  console.log(currentPost);
   return (
     <div className="single-post">
       <div className="single-post-container">
-        <h2 className="single-post-heading">{currentPost.title.rendered}</h2>
+        <h2
+          className="single-post-heading"
+          dangerouslySetInnerHTML={{ __html: currentPost.title.rendered }}
+        ></h2>
         <span className="single-post-date">
           {currentPost.date.slice(0, 10)}
         </span>
