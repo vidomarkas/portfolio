@@ -95,6 +95,9 @@ ul {
       flex-basis: 80%;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       @include maxw(1174) {
         flex-basis: 100%;
       }

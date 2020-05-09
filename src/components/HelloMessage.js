@@ -82,7 +82,7 @@ function HelloMessage() {
   };
 
   return (
-    <div className="card card-padding">
+    <div id="message" className="card card-padding">
       <h2 className="card-heading">Message</h2>
       <form
         action=""

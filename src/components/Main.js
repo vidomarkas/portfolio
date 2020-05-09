@@ -13,6 +13,7 @@ import ProjectDetails from "./ProjectDetails";
 import BlogDetails from "./BlogDetails";
 import NotFound from "./NotFound";
 import ScrollToTop from "./ScrollToTop";
+import Footer from "../components/Footer";
 
 function Main() {
   return (
@@ -47,6 +48,7 @@ function Main() {
               <Route exact path="*" component={NotFound} />
             </Switch>
           </div>
+          <Footer />
         </div>
       </Router>
     </>
