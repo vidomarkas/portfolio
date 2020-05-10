@@ -78,6 +78,18 @@
       @include maxw(770) {
         font-size: 1.3rem;
       }
+      &::-webkit-input-placeholder {
+        color: #1488fa;
+      }
+      &::-moz-placeholder {
+        color: #1488fa;
+      }
+      &:-ms-input-placeholder {
+        color: #1488fa;
+      }
+      &::-ms-input-placeholder {
+        color: #1488fa;
+      }
       &::placeholder {
         color: #1488fa;
       }
@@ -99,6 +111,18 @@
       color: #fff;
       @include maxw(770) {
         font-size: 1.3rem;
+      }
+      &::-webkit-input-placeholder {
+        color: #1488fa;
+      }
+      &::-moz-placeholder {
+        color: #1488fa;
+      }
+      &:-ms-input-placeholder {
+        color: #1488fa;
+      }
+      &::-ms-input-placeholder {
+        color: #1488fa;
       }
       &::placeholder {
         color: #1488fa;

@@ -77,33 +77,8 @@
     }
 
     &:hover {
+      -webkit-filter: brightness(1000%);
       filter: brightness(1000%);
     }
-  }
-}
-
-@keyframes pulse {
-  0% {
-    filter: brightness(100%);
-  }
-
-  55% {
-    filter: brightness(200%);
-  }
-  60.6% {
-    filter: brightness(1000%);
-  }
-  61% {
-    filter: brightness(100%);
-  }
-  70.6% {
-    filter: brightness(1000%);
-  }
-  71% {
-    filter: brightness(200%);
-  }
-
-  100% {
-    filter: brightness(100%);
   }
 }

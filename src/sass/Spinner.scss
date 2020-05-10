@@ -1,23 +1,18 @@
-// This is just to center the spinner
-
-// html,
-// body {
-//   height: 100%;
-// }
-
-// body {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// Here is where the magic happens
-
 $offset: 187;
 $duration: 1.4s;
 
 .spinner {
+  -webkit-animation: rotator $duration linear infinite;
   animation: rotator $duration linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
 }
 
 @keyframes rotator {
@@ -33,8 +28,28 @@ $duration: 1.4s;
   stroke-dasharray: $offset;
   stroke-dashoffset: 0;
   transform-origin: center;
+  -webkit-animation: dash $duration ease-in-out infinite,
+    colors ($duration * 4) ease-in-out infinite;
   animation: dash $duration ease-in-out infinite,
     colors ($duration * 4) ease-in-out infinite;
+}
+
+@-webkit-keyframes colors {
+  0% {
+    stroke: #4285f4;
+  }
+  25% {
+    stroke: #de3e35;
+  }
+  50% {
+    stroke: #f7c223;
+  }
+  75% {
+    stroke: #1b9a59;
+  }
+  100% {
+    stroke: #4285f4;
+  }
 }
 
 @keyframes colors {
@@ -52,6 +67,20 @@ $duration: 1.4s;
   }
   100% {
     stroke: #4285f4;
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: $offset;
+  }
+  50% {
+    stroke-dashoffset: $offset/4;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: $offset;
+    transform: rotate(450deg);
   }
 }
 
