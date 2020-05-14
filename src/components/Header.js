@@ -3,26 +3,13 @@ import React from "react";
 import "../sass/Header.scss";
 import photo from "../assets/img/photo.png";
 import HeaderTabs from "./HeaderTabs";
-import VideoWebm from "../assets/video/header-vid.webm";
-import VideoMp4small from "../assets/video/header-vid-small.mp4";
-import HeaderCover from "../assets/img/header/1.png";
+import headerImg from "../assets/img/violet.jpg";
 
 function Header() {
   return (
     <header className="header">
       <div className="header-background">
-        <video
-          autoPlay
-          muted
-          loop
-          className="header-video"
-          playsInline={true}
-          disablePictureInPicture
-          cover={HeaderCover}
-        >
-          <source src={VideoWebm} type="video/webm" />
-          <source src={VideoMp4small} type="video/mp4" />
-        </video>
+        <img className="header-image" src={headerImg} alt="" />
       </div>
       <div className="header-menu">
         <HeaderTabs />

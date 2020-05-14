@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
         <div className="footer__item">
           <a className="contact-button btn" href="mailto:hi@vdomarkas.com">
-            Let's do this
+            Email me
           </a>
         </div>
       </div>

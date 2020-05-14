@@ -28,7 +28,7 @@ function LatestPost() {
 
   return (
     <div className="card">
-      <h2 className="card-heading latest-heading">Latest blog posts</h2>
+      <h2 className="card-heading latest-heading">Reviews</h2>
       <ul className="latest-posts">{renderedPosts}</ul>
     </div>
   );

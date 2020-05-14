@@ -1,7 +1,7 @@
 import React from "react";
 import bag from "../assets/img/bag.svg";
 import pin from "../assets/img/pin.svg";
-import heart from "../assets/img/heart.svg";
+import gear from "../assets/img/gear.svg";
 import "../sass/Hello.scss";
 import LatestPost from "../components/LatestPost";
 import LatestProject from "../components/LatestProject";
@@ -18,8 +18,14 @@ function Hello() {
               <span>
                 <img src={bag} alt="bag" />
               </span>
+              <p>Front-end web developer</p>
+            </div>
+            <div className="hello-intro--item">
+              <span>
+                <img src={gear} alt="heart" />
+              </span>
               <p>
-                Front-end web developer at <span>your company?</span>
+                <span>JavaScript, React, SASS</span>
               </p>
             </div>
             <div className="hello-intro--item">
@@ -40,22 +46,14 @@ function Hello() {
                 </span>
               </p>
             </div>
-            <div className="hello-intro--item">
-              <span>
-                <img src={heart} alt="heart" />
-              </span>
-              <p>
-                In relationship with <span>Web Development</span>
-              </p>
-            </div>
           </div>
         </div>
         <LatestProject />
       </div>
-      <div className="hello-right">
+      {/* <div className="hello-right">
         <HelloMessage />
         <LatestPost />
-      </div>
+      </div> */}
     </div>
   );
 }

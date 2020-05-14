@@ -1,6 +1,6 @@
 import React from "react";
 import useWindowDimensions from "../hooks/useWindowDimensions";
-import SocialMedia from "./SocialMedia";
+// import SocialMedia from "./SocialMedia";
 import GithubFeed from "./GithubFeed";
 import Main from "./Main";
 
@@ -18,9 +18,9 @@ export function App() {
   } else {
     return (
       <div className="app-container">
-        <GithubFeed />
+        {/* <SocialMedia /> */}
         <Main />
-        <SocialMedia />
+        <GithubFeed />
       </div>
     );
   }

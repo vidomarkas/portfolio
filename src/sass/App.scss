@@ -71,19 +71,20 @@ ul {
 .app {
   &-container {
     min-height: 100vh;
-    max-width: 3000px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     align-items: stretch;
   }
 
   &-item {
+    margin: 0 auto;
     &--GithubFeed {
       flex-basis: 20%;
       padding: 2rem;
       border-radius: 6px;
       margin-top: 2rem;
-      margin-left: 2rem;
+      margin-right: 2rem;
       margin-bottom: 2rem;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
       @include maxw(1174) {
@@ -112,6 +113,13 @@ ul {
       margin-right: 2rem;
       margin-bottom: 2rem;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    &--closed {
+      flex-basis: 5%;
+      height: 30rem;
+      overflow: hidden;
+      display: none;
     }
   }
 }

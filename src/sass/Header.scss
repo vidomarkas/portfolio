@@ -18,7 +18,7 @@
     margin-bottom: 1rem;
   }
 
-  &-video {
+  &-image {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,12 +52,12 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 6.3rem;
+    height: 6.4rem;
     width: 100%;
     background-color: #151728;
     margin-bottom: -1px;
     @include maxw(628) {
-      height: 4.3rem;
+      height: 4.4rem;
     }
   }
 
@@ -81,6 +81,7 @@
     transition: all 0.3s;
     text-transform: capitalize;
     border-bottom: 4px solid #151728;
+
     @include maxw(628) {
       font-size: 1.4rem;
       padding: 1rem 1.2rem;

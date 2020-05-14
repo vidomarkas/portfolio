@@ -15,7 +15,7 @@ const ProjectGalleryItem = ({ project }) => {
       <div className="project-content">
         <h2 className="project-title">{project.title.rendered}</h2>
         <p className="project-description">{project.acf.short_description}</p>
-        <ul className="project-list">
+        {/* <ul className="project-list">
           {project.acf.technologies.map((tech, index) => {
             return (
               <li className="project-list-item" key={index}>
@@ -23,7 +23,7 @@ const ProjectGalleryItem = ({ project }) => {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
 
         <div className="project-links">
           <Link

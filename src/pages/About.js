@@ -7,7 +7,7 @@ export default function About() {
       <div className="about-container">
         <div className="about-header">
           <p className="about-paragraph">
-            I’m a self-thought developer obsessed with self-improvement and
+            I’m a self-taught developer obsessed with self-improvement and
             raising the bar for my work with every project.
           </p>
 

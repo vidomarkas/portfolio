@@ -16,6 +16,7 @@
   }
 
   &-item {
+    height: 19.5rem;
     flex-basis: 50rem;
     margin-left: 4rem;
     margin-bottom: 2rem;
@@ -37,8 +38,8 @@
       margin-left: 0;
     }
 
-    &:hover .project-image-overlay {
-      opacity: 0;
+    &:hover {
+      transform: translateY(-5px);
     }
   }
 }
@@ -50,7 +51,7 @@
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translate(-30px, -50%);
+    transform: translate(-20px, -50%);
     z-index: 1;
 
     @include maxw(466) {

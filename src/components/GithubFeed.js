@@ -4,8 +4,8 @@ import "../sass/GithubFeed.scss";
 
 function GithubFeed() {
   const [repos, setRepos] = useState([]);
-
   const [loading, setLoading] = useState(true);
+  const [closed, setClosed] = useState(true);
 
   const fetchRepos = () => {
     fetch(
@@ -26,13 +26,20 @@ function GithubFeed() {
     fetchRepos();
     // eslint-disable-next-line
   }, []);
-
+  console.log("closed", closed);
   if (!loading) {
     return (
       <div
-        className=" app-item app-item--GithubFeed"
+        className={
+          closed
+            ? "app-item app-item--GithubFeed"
+            : "app-item app-item--GithubFeed app-item--closed"
+        }
         style={{
           backgroundColor: "#151728",
+        }}
+        onClick={() => {
+          setClosed(!closed);
         }}
       >
         <h2 className="github-feed-title">GitHub Feed</h2>

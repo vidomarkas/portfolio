@@ -17,7 +17,7 @@ function LatestProject() {
           }}
         ></div>
         <div className="latest-background-overlay"></div>
-        <h2 className="card-heading latest-heading">Latest project</h2>
+        <h2 className="card-heading latest-heading">Featured project</h2>
         <div className="latest-body">
           <div className="latest-content">
             <h3 className="latest-title">{project.title.rendered}</h3>
