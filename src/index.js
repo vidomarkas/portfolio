@@ -3,15 +3,15 @@ import ReactDOM from "react-dom";
 import App from "./components/App";
 import { ProjectContextProvider } from "./Context/ProjectContext";
 import { PagesContextProvider } from "./Context/PagesContext";
-import { BlogContextProvider } from "./Context/BlogContext";
+import { ReviewContextProvider } from "./Context/ReviewContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <ProjectContextProvider>
       <PagesContextProvider>
-        <BlogContextProvider>
+        <ReviewContextProvider>
           <App />
-        </BlogContextProvider>
+        </ReviewContextProvider>
       </PagesContextProvider>
     </ProjectContextProvider>
   </React.StrictMode>,

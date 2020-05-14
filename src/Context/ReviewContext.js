@@ -1,35 +1,35 @@
 import React, { createContext, useState, useEffect } from "react";
 
-export const BlogContext = createContext({});
+export const ReviewContext = createContext({});
 
-export const BlogContextProvider = (props) => {
-  const [posts, setPosts] = useState([]);
+export const ReviewContextProvider = (props) => {
+  const [reviews, setReviews] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
-  const fetchPosts = () => {
-    fetch("https://vdomarkas.com/wp/wp-json/wp/v2/posts")
+  const fetchReviews = () => {
+    fetch("https://vdomarkas.com/wp/wp-json/wp/v2/reviews")
       .then((response) => response.json())
       .then((data) => {
-        setPosts(data);
+        setReviews(data);
         setLoading(false);
       })
       .catch((err) => {
-        console.log("Error fetching the project data. ", err);
+        console.log("Error fetching reviews. ", err);
       });
   };
 
   useEffect(() => {
     setLoading(true);
-    fetchPosts();
+    fetchReviews();
     // eslint-disable-next-line
   }, []);
 
   if (!loading) {
     return (
-      <BlogContext.Provider value={{ posts }}>
+      <ReviewContext.Provider value={{ reviews }}>
         {props.children}
-      </BlogContext.Provider>
+      </ReviewContext.Provider>
     );
   } else {
     return null;

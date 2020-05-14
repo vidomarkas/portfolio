@@ -18,6 +18,9 @@
   }
   &-right {
     width: calc(52% - 2rem);
+    display: flex;
+    align-items: stretch;
+
     @include maxw(700) {
       width: 100%;
       display: flex;

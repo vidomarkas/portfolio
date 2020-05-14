@@ -3,7 +3,7 @@ import bag from "../assets/img/bag.svg";
 import pin from "../assets/img/pin.svg";
 import gear from "../assets/img/gear.svg";
 import "../sass/Hello.scss";
-import LatestPost from "../components/LatestPost";
+import Reviews from "../components/Reviews";
 import LatestProject from "../components/LatestProject";
 import HelloMessage from "../components/HelloMessage";
 
@@ -50,10 +50,9 @@ function Hello() {
         </div>
         <LatestProject />
       </div>
-      {/* <div className="hello-right">
-        <HelloMessage />
-        <LatestPost />
-      </div> */}
+      <div className="hello-right">
+        <Reviews />
+      </div>
     </div>
   );
 }

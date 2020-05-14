@@ -1,0 +1,61 @@
+import React, { useContext } from "react";
+import "../sass/Reviews.scss";
+import { ReviewContext } from "../Context/ReviewContext";
+import quoteStart from "../assets/img/quote-start.svg";
+import quoteEnd from "../assets/img/quote-end.svg";
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+import AwesomeSliderStyles from "react-awesome-slider/src/styles";
+
+function Reviews() {
+  const { reviews } = useContext(ReviewContext);
+
+  const renderedReviews = reviews.map((review, index) => {
+    console.log("review", review);
+    return (
+      <li className="review" key={index}>
+        <div className="review-body-container">
+          <img className="quote quote-start" src={quoteStart} alt="" />
+          <img className="quote quote-end" src={quoteEnd} alt="" />
+          <p className="review-body">{review.acf.review}</p>
+        </div>
+        <div className="review-author">
+          <div className="review-img-padding">
+            <img
+              className="review-img"
+              src={review.acf.person_photo.sizes.medium_large}
+              alt={review.title.rendered}
+            />
+          </div>
+          <p className="review-name">{review.acf.name}</p>
+          <a className="review-link" href={review.acf.project_link}>
+            {review.acf.project_name}
+          </a>
+        </div>
+      </li>
+    );
+  });
+  console.log("renderedReviews", renderedReviews);
+
+  const AutoplaySlider = withAutoplay(AwesomeSlider);
+
+  return (
+    <div className="card reviews-card">
+      <h2 className="card-heading reviews-heading">Reviews</h2>
+      <div className="reviews">
+        <ul className="reviews-list">
+          <AutoplaySlider
+            play={true}
+            organicArrows={false}
+            cssModule={AwesomeSliderStyles}
+          >
+            {renderedReviews}
+          </AutoplaySlider>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export default Reviews;
