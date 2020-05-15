@@ -33,12 +33,12 @@
   align-items: center;
   flex-direction: column;
   min-height: 30rem;
-  transition: all 0.3s;
 
   &-author {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 1rem;
   }
 
   &-name {
@@ -99,7 +99,7 @@
   }
   &-end {
     position: absolute;
-    bottom: 0;
+    bottom: -2rem;
     right: 2rem;
   }
 }
@@ -117,8 +117,14 @@
 }
 
 .awssld__bullets {
-  bottom: -30px !important;
-  @include maxw(700) {
-    bottom: 0px !important;
-  }
+  bottom: unset !important;
+}
+
+.awssld__bullets button {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.awssld__bullets .awssld__bullets--active {
+  background: #1488fa !important;
 }

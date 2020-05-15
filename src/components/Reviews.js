@@ -48,7 +48,9 @@ function Reviews() {
           <AutoplaySlider
             play={true}
             organicArrows={false}
+            showTimer={false}
             cssModule={AwesomeSliderStyles}
+            interval={6000}
           >
             {renderedReviews}
           </AutoplaySlider>
