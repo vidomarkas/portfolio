@@ -1,0 +1,27 @@
+.not-found {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &-title {
+    font-size: 3rem;
+  }
+  img {
+    width: 100%;
+    max-width: 60rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  &-link {
+    color: #1488fa;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

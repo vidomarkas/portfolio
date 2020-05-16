@@ -1,5 +1,6 @@
 import React from "react";
 import "../sass/About.scss";
+import img from "../assets/img/dev1.svg";
 
 export default function About() {
   return (
@@ -19,7 +20,7 @@ export default function About() {
             I'm passionate about looking for new ways to create and trying out
             latest web technologies.
           </p>
-
+          <img src={img} alt="" style={{ width: "100%" }} />
           <p className="about-paragraph">
             My skills include front-end development (HTML, CSS, JavaScript,
             React). I use tools such as Git, Gulp, Figma, Adobe XD.
