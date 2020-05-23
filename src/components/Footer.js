@@ -28,17 +28,17 @@ export default function Footer() {
         </div>
         <ul className="footer__social-media">
           <li className="footer__icon">
-            <a href="https://www.linkedin.com/in/viktoras-domarkas/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/viktoras-domarkas/">
               <img src={linkedin} alt="Visit linkedin profile" />
             </a>
           </li>
           <li className="footer__icon">
-            <a href="https://github.com/vidomarkas">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/vidomarkas">
               <img src={github} alt="Visit github profile" />
             </a>
           </li>
           <li className="footer__icon">
-            <a href="https://www.instagram.com/vidomarkas/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/vidomarkas/">
               <img src={instagram} alt="Visit instagram profile" />
             </a>
           </li>

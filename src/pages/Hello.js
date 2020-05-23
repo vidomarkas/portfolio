@@ -5,7 +5,7 @@ import gear from "../assets/img/gear.svg";
 import "../sass/Hello.scss";
 import Reviews from "../components/Reviews";
 import LatestProject from "../components/LatestProject";
-import HelloMessage from "../components/HelloMessage";
+// import HelloMessage from "../components/HelloMessage";
 
 function Hello() {
   return (

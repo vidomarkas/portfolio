@@ -38,9 +38,9 @@ function GithubFeed() {
         style={{
           backgroundColor: "#151728",
         }}
-        onClick={() => {
-          setClosed(!closed);
-        }}
+        // onClick={() => {
+        //   setClosed(!closed);
+        // }}
       >
         <h2 className="github-feed-title">GitHub Feed</h2>
         <h3 className="github-feed-subtitle">5 latest repos</h3>

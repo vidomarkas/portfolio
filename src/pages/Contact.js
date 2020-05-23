@@ -13,6 +13,7 @@ export default function Contact() {
         <li className="contact-link">
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.linkedin.com/in/viktoras-domarkas/"
           >
             <img src={linkedin} alt="Visit linkedin profile" />{" "}
@@ -20,14 +21,14 @@ export default function Contact() {
           </a>
         </li>
         <li className="contact-link">
-          <a target="_blank" href="https://github.com/vidomarkas">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/vidomarkas">
             <img src={github} alt="Visit github profile" />{" "}
             github.com/vidomarkas
           </a>
         </li>
 
         <li className="contact-link">
-          <a target="_blank" href="mailto:hi@vdomarkas.com">
+          <a  href="mailto:hi@vdomarkas.com">
             <img src={email} alt="Send an email" />
             hi@vdomarkas.com
           </a>
