@@ -18,6 +18,36 @@
     margin-bottom: 1rem;
   }
 
+  &-github-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #151728;
+    bottom: 0;
+    flex-basis: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    cursor: pointer;
+    &:hover p {
+      color: #1488fa;
+    }
+
+    @include maxw(1174) {
+      display: none;
+      pointer-events: none;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin: 0;
+      overflow: visible;
+      transform: rotate(270deg);
+      white-space: nowrap;
+    }
+  }
+
   &-image {
     position: absolute;
     top: 50%;

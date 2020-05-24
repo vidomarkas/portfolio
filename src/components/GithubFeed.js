@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import StarSvg from "../assets/img/star.svg";
 import "../sass/GithubFeed.scss";
+import { GithubFeedContext } from "../Context/GithubFeedContext";
 
 function GithubFeed() {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [closed, setClosed] = useState(true);
+  const { closed } = useContext(GithubFeedContext);
 
   const fetchRepos = () => {
     fetch(
@@ -38,9 +39,6 @@ function GithubFeed() {
         style={{
           backgroundColor: "#151728",
         }}
-        // onClick={() => {
-        //   setClosed(!closed);
-        // }}
       >
         <h2 className="github-feed-title">GitHub Feed</h2>
         <h3 className="github-feed-subtitle">5 latest repos</h3>
@@ -86,14 +84,12 @@ function GithubFeed() {
                 ) : null;
               })}
             </ul>
-          ) : (
-            <h3>Downloading repos...</h3>
-          )}
+          ) : null}
         </div>
       </div>
     );
   } else {
-    return <h3>Downloading repos...</h3>;
+    return null;
   }
 }
 
