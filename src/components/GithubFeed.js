@@ -27,7 +27,6 @@ function GithubFeed() {
     fetchRepos();
     // eslint-disable-next-line
   }, []);
-  console.log("closed", closed);
   if (!loading) {
     return (
       <div

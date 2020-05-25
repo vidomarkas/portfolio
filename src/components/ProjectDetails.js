@@ -41,11 +41,6 @@ export default function ProjectDetails({ location }) {
     for (let i = 2; i < 10; i++) {
       if (project.acf["image" + i]) {
         imgList.push(project.acf["image" + i].sizes.medium_large);
-        console.log(
-          'project.acf["image" + i + ".sizes.medium_large"]',
-          project.acf["image" + i + ".sizes.medium_large"]
-        );
-        console.log("imgList", imgList);
       }
     }
     setProjectImages([...imgList]);

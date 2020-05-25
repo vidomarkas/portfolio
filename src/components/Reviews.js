@@ -46,6 +46,7 @@ function Reviews() {
       <div className="reviews">
         <ul className="reviews-list">
           <AutoplaySlider
+            className="reviews-slider"
             play={true}
             organicArrows={false}
             showTimer={false}
