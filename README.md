@@ -4,9 +4,9 @@ Viktoras Domarkas portfolio website
 
 [vdomarkas.com](https://vdomarkas.com)
 
-This is a React application with a WordPress backend.
+React application with hooks connected to backend via WordPress API.
 
-Technologies used in this project:
+### Technologies used in this project:
 
 **React hooks** : useState, useEffect, useContext and some other custom hooks.  
 **React context**: a way to pass props to deep nested components to avoid prop drilling.  
