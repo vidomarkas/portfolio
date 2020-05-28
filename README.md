@@ -1,4 +1,4 @@
-# portfolio-react-wordpress
+# Portfolio
 Viktoras Domarkas portfolio website
 
 This is a React application with a WordPress backend.
