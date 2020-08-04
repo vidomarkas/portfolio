@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect } from "react";
-import Spinner from "../components/Spinner";
 
 export const ProjectContext = createContext({});
 
@@ -45,33 +44,18 @@ export const ProjectContextProvider = (props) => {
     // eslint-disable-next-line
   }, [loading]);
 
-  if (!loading) {
-    return (
-      <ProjectContext.Provider
-        value={{
-          projects,
-          filteredProjects,
-          filterProjects,
-          loading,
-          activeTab,
-          setActiveTab,
-        }}
-      >
-        {props.children}
-      </ProjectContext.Provider>
-    );
-  } else {
-    return (
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-        }}
-      >
-        <Spinner />
-      </div>
-    );
-  }
+  return (
+    <ProjectContext.Provider
+      value={{
+        projects,
+        filteredProjects,
+        filterProjects,
+        loading,
+        activeTab,
+        setActiveTab,
+      }}
+    >
+      {props.children}
+    </ProjectContext.Provider>
+  );
 };

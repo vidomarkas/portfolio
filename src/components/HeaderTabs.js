@@ -3,7 +3,7 @@ import HeaderTab from "./HeaderTab";
 import { PagesContext } from "../Context/PagesContext";
 
 function HeaderTabs() {
-  const { pages } = useContext(PagesContext);
+  const { pages, loading } = useContext(PagesContext);
   const [activeTab, setActiveTab] = useState(
     window.location.pathname.substring(1)
   );
@@ -32,7 +32,7 @@ function HeaderTabs() {
         onClickTabItem={onClickTabItem}
         active={activeTab}
       />
-      {pagesList}
+      {!loading && pagesList ? pagesList : null}
     </div>
   );
 }

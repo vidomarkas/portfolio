@@ -2,16 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import "../sass/Main.scss";
-
 import Hello from "../pages/Hello";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-
 import Projects from "../pages/Projects";
-import Skills from "../pages/Skills";
 import backgroundImg from "../assets/img/grad.jpg";
 import ProjectDetails from "./ProjectDetails";
-
 import NotFound from "./NotFound";
 import ScrollToTop from "./ScrollToTop";
 import Footer from "../components/Footer";
@@ -32,7 +28,6 @@ function Main() {
             <Switch>
               <Route exact path="/" component={Hello} />
               <Route exact path="/about" component={About} />
-              <Route exact path="/skills" component={Skills} />
               <Route exact path="/projects" component={Projects} />
               <Route exact path="/contact" component={Contact} />
               <Route path="/project" component={ProjectDetails} />

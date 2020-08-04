@@ -5,7 +5,6 @@ import gear from "../assets/img/gear.svg";
 import "../sass/Hello.scss";
 import Reviews from "../components/Reviews";
 import LatestProject from "../components/LatestProject";
-// import HelloMessage from "../components/HelloMessage";
 
 function Hello() {
   return (
@@ -25,7 +24,8 @@ function Hello() {
                 <img src={gear} alt="heart" />
               </span>
               <p>
-                <span>JavaScript, React, SASS</span>
+                Skilled at{" "}
+                <span>JavaScript, React, Redux, SASS, CSS3, HTML5 </span>
               </p>
             </div>
             <div className="hello-intro--item">

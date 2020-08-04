@@ -7,12 +7,12 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import AwesomeSliderStyles from "react-awesome-slider/src/styles";
+import Spinner from "./Spinner";
 
 function Reviews() {
-  const { reviews } = useContext(ReviewContext);
+  const { reviews, loading } = useContext(ReviewContext);
 
   const renderedReviews = reviews.map((review, index) => {
-    console.log("review", review);
     return (
       <li className="review" key={index}>
         <div className="review-body-container">
@@ -36,7 +36,6 @@ function Reviews() {
       </li>
     );
   });
-  console.log("renderedReviews", renderedReviews);
 
   const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -53,7 +52,20 @@ function Reviews() {
             cssModule={AwesomeSliderStyles}
             interval={6000}
           >
-            {renderedReviews}
+            {!loading && reviews ? (
+              renderedReviews
+            ) : (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                <Spinner />
+              </div>
+            )}
           </AutoplaySlider>
         </ul>
       </div>

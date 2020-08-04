@@ -25,13 +25,9 @@ export const ReviewContextProvider = (props) => {
     // eslint-disable-next-line
   }, []);
 
-  if (!loading) {
-    return (
-      <ReviewContext.Provider value={{ reviews }}>
-        {props.children}
-      </ReviewContext.Provider>
-    );
-  } else {
-    return null;
-  }
+  return (
+    <ReviewContext.Provider value={{ reviews, loading }}>
+      {props.children}
+    </ReviewContext.Provider>
+  );
 };

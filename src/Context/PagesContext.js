@@ -25,13 +25,9 @@ export const PagesContextProvider = (props) => {
     // eslint-disable-next-line
   }, []);
 
-  if (!loading) {
-    return (
-      <PagesContext.Provider value={{ pages }}>
-        {props.children}
-      </PagesContext.Provider>
-    );
-  } else {
-    return null;
-  }
+  return (
+    <PagesContext.Provider value={{ pages, loading }}>
+      {props.children}
+    </PagesContext.Provider>
+  );
 };

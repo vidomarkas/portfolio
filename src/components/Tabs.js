@@ -4,16 +4,18 @@ import "../sass/Tabs.scss";
 import Tab from "./Tab";
 
 function Tabs() {
-  const { projects, filterProjects, activeTab, setActiveTab } = useContext(
-    ProjectContext
-  );
+  const {
+    projects,
+    filterProjects,
+    activeTab,
+    setActiveTab,
+    loading,
+  } = useContext(ProjectContext);
 
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
-  //const [activeTab, setActiveTab] = useState("all");
+  const [categories, setCategories] = useState(["all"]);
 
   const getTabLabels = () => {
-    const list = ["all", ...categories];
+    const list = [...categories];
     projects.map((project) => {
       if (!list.includes(project.acf.category)) {
         list.push(project.acf.category);
@@ -26,14 +28,7 @@ function Tabs() {
   // runs when mounted
   useEffect(() => {
     getTabLabels();
-    // eslint-disable-next-line
-  }, []);
-
-  useEffect(() => {
-    if (categories.length > 1) {
-      setLoading(false);
-    }
-  }, [categories]);
+  }, [loading]);
 
   const onClickTabItem = (category) => {
     setActiveTab(category);
@@ -51,14 +46,14 @@ function Tabs() {
     );
   });
 
-  if (loading) {
-    return <p>loading</p>;
-  } else {
+  if (!loading && categories) {
     return (
       <div className="tabs-container">
         <ul className="tabs-list">{singleCategory}</ul>
       </div>
     );
+  } else {
+    return null;
   }
 }
 
