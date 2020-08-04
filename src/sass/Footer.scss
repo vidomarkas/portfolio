@@ -5,6 +5,7 @@
   position: relative;
   padding: 2rem;
   margin: 2rem;
+  margin-top: 0;
   @include maxw(628) {
     margin: 1rem;
   }

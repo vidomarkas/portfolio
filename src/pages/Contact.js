@@ -21,16 +21,20 @@ export default function Contact() {
           </a>
         </li>
         <li className="contact-link">
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/vidomarkas">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/vidomarkas"
+          >
             <img src={github} alt="Visit github profile" />{" "}
             github.com/vidomarkas
           </a>
         </li>
 
         <li className="contact-link">
-          <a  href="mailto:hi@vdomarkas.com">
+          <a href="mailto:vidomarkas@gmail.com">
             <img src={email} alt="Send an email" />
-            hi@vdomarkas.com
+            vidomarkas@gmail.com
           </a>
         </li>
       </ul>
