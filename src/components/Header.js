@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import "../sass/Header.scss";
-import photo from "../assets/img/photo.png";
+import photo from "../assets/img/photo.jpg";
 import HeaderTabs from "./HeaderTabs";
 import headerImg from "../assets/img/violet.jpg";
 import { GithubFeedContext } from "../Context/GithubFeedContext";

@@ -18,7 +18,7 @@ export default function ProjectDetails({ location }) {
 
   // Context
 
-  const { projects } = useContext(ProjectContext);
+  const { projects, loading } = useContext(ProjectContext);
 
   // Awesome Slider settings
 
@@ -32,9 +32,12 @@ export default function ProjectDetails({ location }) {
   );
 
   useEffect(() => {
-    setProject(currentProject);
+    if (projects) {
+      setProject(currentProject);
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [projects]);
 
   const getProjectImages = () => {
     let imgList = [];
@@ -79,7 +82,7 @@ export default function ProjectDetails({ location }) {
     }
   };
 
-  if (project) {
+  if (!loading && project) {
     return (
       <>
         <div className="project-details">
@@ -106,7 +109,7 @@ export default function ProjectDetails({ location }) {
 
                 {project.acf.live_link ? (
                   <a
-                    className="btn btn-secondary project-details-link"
+                    className="btn btn-primary project-details-link"
                     href={project.acf.live_link}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -207,7 +210,10 @@ export default function ProjectDetails({ location }) {
                 </section>
               ) : null}
 
-              <Link className="btn btn-secondary" to="/projects/">
+              <Link
+                className="project-details-back btn btn-secondary"
+                to="/projects/"
+              >
                 ‹ Back
               </Link>
             </div>

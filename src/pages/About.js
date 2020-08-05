@@ -23,11 +23,12 @@ export default function About() {
           <img src={img} alt="" style={{ width: "100%" }} />
           <p className="about-paragraph">
             My skills include front-end development (HTML, CSS, JavaScript,
-            React). I use tools such as Git, Gulp, Figma, Adobe XD.
+            React, Redux). I use tools such as Git, Figma, Adobe XD.
           </p>
           <p className="about-paragraph">
-            Currently, I am looking to become a member of a professional dev
-            team to level up my skills and collaborate with like minded people.
+            Currently, I am looking to become a member of a professional
+            developer team to level up my skills and collaborate with like
+            minded people.
           </p>
         </div>
       </div>

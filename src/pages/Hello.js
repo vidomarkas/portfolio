@@ -2,6 +2,7 @@ import React from "react";
 import bag from "../assets/img/bag.svg";
 import pin from "../assets/img/pin.svg";
 import gear from "../assets/img/gear.svg";
+import links from "../assets/img/links.svg";
 import "../sass/Hello.scss";
 import Reviews from "../components/Reviews";
 import LatestProject from "../components/LatestProject";
@@ -21,11 +22,18 @@ function Hello() {
             </div>
             <div className="hello-intro--item">
               <span>
+                <img src={links} alt="heart" />
+              </span>
+              <p>
+                Links <span>Github</span>
+              </p>
+            </div>
+            <div className="hello-intro--item">
+              <span>
                 <img src={gear} alt="heart" />
               </span>
               <p>
-                Skilled at{" "}
-                <span>JavaScript, React, Redux, SASS, CSS3, HTML5 </span>
+                Skills <span>JavaScript, React, Redux, SASS, CSS3, HTML5 </span>
               </p>
             </div>
             <div className="hello-intro--item">

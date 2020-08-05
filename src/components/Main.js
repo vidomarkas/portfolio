@@ -30,8 +30,8 @@ function Main() {
               <Route exact path="/about" component={About} />
               <Route exact path="/projects" component={Projects} />
               <Route exact path="/contact" component={Contact} />
-              <Route path="/project" component={ProjectDetails} />
-              <Route exact path="*" component={NotFound} />
+              <Route path="/project/:id" component={ProjectDetails} />
+              {/* <Route exact path="*" component={NotFound} /> */}
             </Switch>
           </div>
           <Footer />
