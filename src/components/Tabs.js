@@ -28,6 +28,7 @@ function Tabs() {
   // runs when mounted
   useEffect(() => {
     getTabLabels();
+    // eslint-disable-next-line
   }, [loading]);
 
   const onClickTabItem = (category) => {

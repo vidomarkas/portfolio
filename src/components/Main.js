@@ -8,7 +8,6 @@ import Contact from "../pages/Contact";
 import Projects from "../pages/Projects";
 import backgroundImg from "../assets/img/grad.jpg";
 import ProjectDetails from "./ProjectDetails";
-import NotFound from "./NotFound";
 import ScrollToTop from "./ScrollToTop";
 import Footer from "../components/Footer";
 
