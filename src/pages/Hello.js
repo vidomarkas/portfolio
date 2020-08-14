@@ -22,20 +22,13 @@ function Hello() {
             </div>
             <div className="hello-intro--item">
               <span>
-                <img src={links} alt="heart" />
-              </span>
-              <p>
-                Links <span>Github</span>
-              </p>
-            </div>
-            <div className="hello-intro--item">
-              <span>
                 <img src={gear} alt="heart" />
               </span>
               <p>
-                Skills <span>JavaScript, React, Redux, SASS, CSS3, HTML5 </span>
+                Skills <span>JavaScript, React, Redux, SASS </span>
               </p>
             </div>
+
             <div className="hello-intro--item">
               <span>
                 <img src={pin} alt="location" />
@@ -51,6 +44,20 @@ function Hello() {
                   >
                     Gravesend, Kent
                   </a>{" "}
+                </span>
+              </p>
+            </div>
+            <div className="hello-intro--item">
+              <span>
+                <img src={links} alt="heart" />
+              </span>
+              <p>
+                Links{" "}
+                <span>
+                  <a href="https://github.com/vidomarkas">Github</a>{" "}
+                  <a href="https://www.linkedin.com/in/viktoras-domarkas/">
+                    Linked In
+                  </a>
                 </span>
               </p>
             </div>

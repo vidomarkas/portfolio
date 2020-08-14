@@ -54,7 +54,7 @@
 .story {
   margin: 0 auto 7rem auto;
   width: 70%;
-  color: #858685;
+  color: #cacaca;
   font-size: 1.8rem;
   line-height: 3rem;
   font-weight: 400;
@@ -85,7 +85,7 @@
       font-weight: 400;
       line-height: 3rem;
       font-size: 2rem;
-      color: #858685;
+      color: #cacaca;
       margin: 0;
       margin-bottom: 2rem;
       @include maxw(465) {
@@ -135,7 +135,7 @@
     }
 
     &-paragraph {
-      color: #858685;
+      color: #cacaca;
       margin: 0;
       line-height: 165%;
       text-align: left;

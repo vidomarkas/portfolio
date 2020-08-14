@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProjectContext } from "../Context/ProjectContext";
-
+import Spinner from "./Spinner";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
@@ -220,6 +220,14 @@ export default function ProjectDetails({ location }) {
           </div>
         </div>
       </>
+    );
+  } else if (loading && !project) {
+    return (
+      <div className="project-details">
+        <div className="project-details-container">
+          <Spinner />
+        </div>
+      </div>
     );
   } else {
     return <NotFound />;
