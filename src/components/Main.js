@@ -10,6 +10,7 @@ import backgroundImg from "../assets/img/grad.jpg";
 import ProjectDetails from "./ProjectDetails";
 import ScrollToTop from "./ScrollToTop";
 import Footer from "../components/Footer";
+import NotFound from "./NotFound";
 
 function Main() {
   return (
@@ -18,7 +19,11 @@ function Main() {
         <ScrollToTop />
         <div className="app-item app-item--Main ">
           <div className="main-background">
-            <img className="" src={backgroundImg} alt="" />
+            <img
+              className="main-background__image"
+              src={backgroundImg}
+              alt=""
+            />
             <div className="main-overlay"></div>
           </div>
 
@@ -30,7 +35,7 @@ function Main() {
               <Route exact path="/projects" component={Projects} />
               <Route exact path="/contact" component={Contact} />
               <Route path="/project/:id" component={ProjectDetails} />
-              {/* <Route exact path="*" component={NotFound} /> */}
+              <Route exact path="*" component={NotFound} />
             </Switch>
           </div>
           <Footer />
